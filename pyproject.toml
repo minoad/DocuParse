@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "DocuParse"
+version = "0.1.0"
+description = "Parses documents."
+requires-python = ">=3.12"
+license = { file = "LICENSE.txt" }
+keywords = ["template",]
+authors = [{ name = "Micah Norman", email = "minoad@gmail.com" }]
+maintainers = [{ name = "Micah Norman", email = "minoad@gmail.com" }]
+dependencies = [
+  'pymupdf',
+  'python-dotenv'
+]
+
+[project.optional-dependencies]
+dev = [
+  "debugpy",
+  "pylint",
+  "toml",
+  "yapf",
+  "colorama",
+  "isort",
+  "black",
+  "mypy",
+  "pytest",
+  "mypy-extensions",
+  "pre-commit",
+  "python-dotenv",
+  "requests",
+  "requests-mock",
+  "types-requests",
+  "detect-secrets"
+]
+
+all = ["DocuParse[dev]"]
+
+[project.urls]
+homepage = "https://example.com"
+documentation = "https://readthedocs.org"
+repository = "https://github.com/minoad/DocuParse"
+changelog = "https://github.com/minoad/DocuParse/CHANGELOG.md"
+
+[tool.mypy]
+warn_unreachable = true
+show_error_codes = true
+show_column_numbers = true
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 120
+target-version = ['py312']
+include = '\.pyi?$'
+preview = true
+
+[tool.pylint.format]
+max-line-length = "120"
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+
+# [project.scripts]
+# DocuParse"-cli = "DocuParse""-cli:main_cli"
+# #Equivilent to `from spam import main_cli; main_cli()`
+# #Touch DocuParse"/__init__.py
+# # echo 'def main_cli(): pass' >> DocuParse""/__init__.py
+
+# [project.gui-scripts]
+# DocuParse"-gui = "DocuParse""-gui:main_cli"
+# # echo 'def main_gui(): pass' >> DocuParse""/__init__.py
+
+# Deploy using pip install -e .[all]

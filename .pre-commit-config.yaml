@@ -1,0 +1,44 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.6.0 # Use the latest stable version
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: check-added-large-files
+- repo: local
+  hooks:
+  - id: pytest
+    name: pytest
+    entry: pytest
+    language: system
+    types: [python]
+    pass_filenames: false
+- repo: https://github.com/Yelp/detect-secrets
+  rev: v1.5.0
+  hooks:
+  - id: detect-secrets
+    args: ['--baseline', '.secrets.baseline']
+    exclude: package.lock.json
+- repo: https://github.com/psf/black
+  rev: 24.4.2
+  hooks:
+  - id: black
+- repo: https://github.com/PyCQA/pylint
+  rev: v3.2.2
+  hooks:
+  - id: pylint
+    args: [src, --disable=import-error, --disable=C0103, --disable=C0114, --disable=C0115, --disable=C0116]
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.10.0
+  hooks:
+  - id: mypy
+- repo: https://github.com/pre-commit/mirrors-isort
+  rev: v5.10.1
+  hooks:
+  - id: isort
+- repo: https://github.com/PyCQA/bandit
+  rev: 1.7.8
+  hooks:
+  - id: bandit
+    args: ["-c", "pyproject.toml"]
+    additional_dependencies: ["bandit[toml]"]
