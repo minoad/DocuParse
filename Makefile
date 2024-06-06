@@ -1,6 +1,7 @@
 .PHONY: build
 build:
 	pip install -e .
+	pre-commit install
 
 .PHONY: docker_clean
 docker_clean:
@@ -16,6 +17,10 @@ mypy:
 .PHONY: test
 test:
 	pytest test/
+
+.PHONY: precommit
+precommit:
+	pre-commit run --all-files
 
 .PHONY: coverage
 coverage:  ## Run tests with coverage

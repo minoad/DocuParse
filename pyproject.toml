@@ -12,7 +12,9 @@ authors = [{ name = "Micah Norman", email = "minoad@gmail.com" }]
 maintainers = [{ name = "Micah Norman", email = "minoad@gmail.com" }]
 dependencies = [
   'pymupdf',
-  'python-dotenv'
+  'python-dotenv',
+  'pillow',
+  'pytesseract'
 ]
 
 [project.optional-dependencies]
