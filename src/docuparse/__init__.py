@@ -24,8 +24,9 @@ class Config:
     Config management for project
     """
 
-    PROJECT_NAME: str | None = os.getenv("PROJECT_NAME")
-    ENVIRONMENT: str | None = os.getenv("ENVIRONMENT")
+    project_name: str | None = os.getenv("PROJECT_NAME")
+    environment: str | None = os.getenv("ENVIRONMENT")
+    pytesseract_executable: str | None = os.getenv("pytesseract_exe", r"C:\Program Files\Tesseract-OCR\tesseract.exe")
 
 
 # Create an instance of the Config class

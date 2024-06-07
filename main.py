@@ -18,7 +18,8 @@ def main() -> int:
     """
     logger.debug("begin run")
     # n = FileDataDirectory("data/plats/CAP ROCK ESTATES")
-    n = FileDataDirectory("data/plats/BLUFFS")
+    # n = FileDataDirectory("data/plats/BLUFFS")
+    n = FileDataDirectory("data/test/pdf/")
     n.process_files()
     return 0
 
