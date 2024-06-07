@@ -14,7 +14,8 @@ dependencies = [
   'pymupdf',
   'python-dotenv',
   'pillow',
-  'pytesseract'
+  'pytesseract',
+  'fpdf'
 ]
 
 [project.optional-dependencies]
@@ -34,7 +35,8 @@ dev = [
   "requests",
   "requests-mock",
   "types-requests",
-  "detect-secrets"
+  "detect-secrets",
+  "types-requests"
 ]
 
 all = ["DocuParse[dev]"]
@@ -49,8 +51,13 @@ changelog = "https://github.com/minoad/DocuParse/CHANGELOG.md"
 warn_unreachable = true
 show_error_codes = true
 show_column_numbers = true
+ignore_missing_imports = true
+
 [tool.pytest.ini_options]
 addopts = "--strict-config --strict-markers"
+filterwarnings = [
+    "ignore::DeprecationWarning"
+]
 
 [tool.bandit]
 exclude_dirs = ["*/tests/*"]
@@ -71,6 +78,10 @@ max-line-length = "120"
 
 [tool.pylint.'MESSAGES CONTROL']
 max-line-length = 120
+disable = [
+    "logging-fstring-interpolation",
+    "W0511",
+]
 
 # [project.scripts]
 # DocuParse"-cli = "DocuParse""-cli:main_cli"
