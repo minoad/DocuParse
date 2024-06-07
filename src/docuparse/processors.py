@@ -118,3 +118,59 @@ class ImageProcessor:  # pylint: disable=too-few-public-methods
             file_path = pathlib.Path(file_path)
         text = self.ocr_image(file_path)
         return {"text": text}
+
+
+class FileDataDirectory:  # pylint: disable=too-few-public-methods
+    """
+    Represents a directory containing files to be processed.
+
+    Args:
+        directory (str): The path to the directory.
+        db_uri (str): The URI of the database.
+
+    Attributes:
+        directory (Path): The path to the directory.
+        processors (dict): A dictionary mapping file extensions to processor objects.
+
+    """
+
+    def __init__(self, directory: str, db_uri: str):
+        self.directory = pathlib.Path(directory)
+        logger.debug(db_uri)
+        # self.db_client = MongoClient(db_uri)
+        # self.db = self.db_client['file_data_db']
+        # self.collection = self.db['files']
+
+        # Initialize processors
+        self.processors = {
+            ".pdf": PDFProcessor(),
+            ".png": ImageProcessor(),
+            ".jpeg": ImageProcessor(),
+            ".jpg": ImageProcessor(),
+            # Add other file processors here
+        }
+
+    def process_files(self):
+        """
+        Process all files in the specified directory using the registered processors.
+
+        Raises:
+            ValueError: If the specified directory is not a valid directory.
+        """
+        if not self.directory.is_dir():
+            raise ValueError(f"The path {self.directory} is not a valid directory.")
+
+        for file_path in self.directory.iterdir():
+            if file_path.suffix.lower() in self.processors:
+                processor = self.processors[file_path.suffix.lower()]
+                data = processor.process(file_path)
+                logger.debug(data)
+                # self.save_to_db(file_path, data)
+
+    # def save_to_db(self, file_path: pathlib.Path, data: Dict[str, Any]):
+    #     document = {
+    #         "file_name": file_path.name,
+    #         "file_path": str(file_path),
+    #         "data": data
+    #     }
+    #     self.collection.insert_one(document)
