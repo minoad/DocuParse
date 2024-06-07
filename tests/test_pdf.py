@@ -12,7 +12,9 @@ test_cases: dict[str, dict[str, Any]] = {
         "expected_exception": None,
     },
     "pdf_test_file": {
-        "function": lambda: PDFProcessor().process("data/test/pdf/pdf_image_and_text.pdf")["text_data"][1],
+        "function": lambda: PDFProcessor().process_file("data/test/pdf/pdf_image_and_text.pdf")[
+            "C:\\Users\\Micah\\repos\\DocuParse\\data\\test\\pdf\\pdf_image_and_text.pdf"
+        ][1],
         "expected": "300 x 300",
         "expected_exception": None,
     },
