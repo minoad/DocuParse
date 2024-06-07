@@ -3,11 +3,17 @@ from typing import Any
 import pytest
 
 from docuparse import config, logger
+from docuparse.processors import PDFProcessor
 
 test_cases: dict[str, dict[str, Any]] = {
     "invalid_path": {
         "function": lambda: config.ENVIRONMENT,
         "expected": "dev",
+        "expected_exception": None,
+    },
+    "pdf_test_file": {
+        "function": lambda: PDFProcessor().process("data/test/pdf/pdf_image_and_text.pdf")["text_data"][1],
+        "expected": "300 x 300",
         "expected_exception": None,
     },
 }
