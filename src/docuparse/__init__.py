@@ -27,6 +27,7 @@ class Config:
     project_name: str | None = os.getenv("PROJECT_NAME")
     environment: str | None = os.getenv("ENVIRONMENT")
     pytesseract_executable: str | None = os.getenv("pytesseract_exe", r"C:\Program Files\Tesseract-OCR\tesseract.exe")
+    mongo_db_config: str | None = os.getenv("mongo_db_config", '{"server": "server_name.db"}')
 
 
 # Create an instance of the Config class

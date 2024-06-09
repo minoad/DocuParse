@@ -16,7 +16,11 @@ dependencies = [
   'pillow',
   'pytesseract',
   'fpdf',
-  'httpx'
+  'httpx',
+  'nltk',
+  'textstat',
+  'spacy',
+  'sense2vec'
 ]
 
 [project.optional-dependencies]

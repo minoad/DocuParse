@@ -1,68 +1,35 @@
+"""
+This module contains classes and protocols for file processing and OCR (Optical Character Recognition).
+
+Classes:
+- OCREngine: Provides functionality for performing OCR on images.
+- FileProcessor: Protocol for file processors.
+- OCRProcessor: Protocol for OCR processors.
+- PDFProcessor: File processor for PDF files.
+- ImageProcessor: File processor for images.
+- FileDataDirectory: Represents a directory containing files to be processed.
+
+Protocols:
+- FileProcessor: Protocol for file processors.
+- OCRProcessor: Protocol for OCR processors.
+
+"""
+
+# Rest of the code...
 import io
 import pathlib
 import re
-from dataclasses import dataclass, field
 from typing import Any, Dict, Protocol
 
 import pymupdf
 import pytesseract
 from PIL import Image
 
-from docuparse import config, logger
+from docuparse import logger
 from docuparse.error_handlers import handle_file_exceptions
-
+from docuparse.ocr import OCREngine
 
 # TODO: Move this to its own file.
-class OCREngine:
-    def __init__(self):
-        if config.pytesseract_executable:
-            logger.info("Using pytesseract executable defined in config at %s", config.pytesseract_executable)
-            pytesseract.pytesseract.tesseract_cmd = config.pytesseract_executable
-
-    def get_config(self):
-        return config.pytesseract_executable
-
-    def perform_ocr(self, image_dat: pathlib.Path | str | Image.Image) -> str:
-        """
-        Perform OCR (Optical Character Recognition) on the given image data.
-
-        Args:
-            image_dat (pathlib.Path | str | Image.Image): The image data to perform OCR on.
-                It can be a file path, a string representing the file path, or an instance of the Image.Image class.
-
-        Returns:
-            str: The extracted text from the image.
-
-        Raises:
-            pytesseract.TesseractError: If an error occurs during the OCR process.
-
-        """
-        if isinstance(image_dat, (str, pathlib.Path)):
-            image_dat = Image.open(image_dat)
-
-        try:
-            osd = pytesseract.image_to_osd(image_dat)
-        except pytesseract.TesseractError as e:
-            if "Too few characters" in str(e):
-                try:
-                    osd = pytesseract.image_to_osd(image_dat, config="--psm 0 -c min_characters_to_try=5")
-                except pytesseract.TesseractError as ex:
-                    logger.error(f"Retry failed with error: {ex.__class__.__name__} - {str(ex)}")
-                    osd = None
-            else:
-                logger.error(f"Unexpected TesseractError: {e.__class__.__name__} - {str(e)}")
-                osd = None
-
-        if osd:
-            rotation_match = re.search(r"(?<=Rotate: )\d+", osd)
-            if rotation_match:
-                angle = int(rotation_match.group(0))
-                if angle != 0:
-                    logger.warning(f"Image detecting a rotation of {angle}")
-                    image_dat = image_dat.rotate(angle, expand=True)
-
-        text = pytesseract.image_to_string(image_dat).strip()
-        return text
 
 
 class FileProcessor(Protocol):  # pylint: disable=too-few-public-methods
@@ -98,20 +65,24 @@ class PDFProcessor:  # pylint: disable=too-few-public-methods
         self.text: dict[str, list[str]] = {}
         self.ocr_engine = ocr_engine
 
-    def _process_image(self, image: pymupdf.Pixmap) -> str:
+    def _process_image(self, image: pymupdf.Pixmap, file_name: str = "") -> str:
         try:
             with Image.open(io.BytesIO(image.tobytes())) as pil_image:
                 if pil_image.mode != "RGB":
                     pil_image = pil_image.convert("RGB")
                 # ocr_image = self.ocr_image(pil_image)
-                ocr_image = self.ocr_engine.perform_ocr(pil_image)
+                ocr_image = self.ocr_engine.perform_ocr(pil_image, file_name)
                 image_text = re.sub(r"[^A-Za-z0-9]+", " ", ocr_image)
         except (OSError, RuntimeError, ValueError) as e:
+            if "unsupported colorspace for" in str(e):
+                logger.error(f"{e}")
+                return ""
             logger.error(e)
             raise e
+
         return image_text
 
-    def _process_page(self, page: pymupdf.Page, doc: pymupdf.Document) -> list[str]:
+    def _process_page(self, page: pymupdf.Page, doc: pymupdf.Document, file_name: str = "") -> list[str]:
         """
         Given a page:
             text = []
@@ -119,10 +90,10 @@ class PDFProcessor:  # pylint: disable=too-few-public-methods
             for each image in page, ocr and append to text
         """
         text = []
-        text.append(page.get_text())
+        text.append(page.get_text())  # type: ignore
         for image in page.get_images():
             try:
-                image_text = self._process_image(pymupdf.Pixmap(doc, image[0]))
+                image_text = self._process_image(pymupdf.Pixmap(doc, image[0]), file_name)
                 text.append(image_text)
             except (OSError, RuntimeError, ValueError) as e:
                 logger.error(e)
@@ -142,9 +113,9 @@ class PDFProcessor:  # pylint: disable=too-few-public-methods
 
         text_dat = []
         try:
-            with pymupdf.open(file_path) as doc:  # opened file
+            with pymupdf.open(file_path) as doc:
                 for page in doc:
-                    page_text = self._process_page(page, doc)
+                    page_text = self._process_page(page, doc, str(file_path))  # type: ignore
                     text_dat.extend(page_text)
         except (OSError, RuntimeError, ValueError) as e:
             handle_file_exceptions(e, str(file_path.resolve()))
@@ -177,70 +148,3 @@ class ImageProcessor:  # pylint: disable=too-few-public-methods
             file_path = pathlib.Path(file_path)
         text = self.ocr_image(file_path)
         return {"text": text}
-
-
-ocr = OCREngine()
-DEFAULT_PROCESSORS: Dict[str, FileProcessor] = {
-    ".pdf": PDFProcessor(ocr),  # Instantiate PDFProcessor
-    ".png": ImageProcessor(),  # Instantiate ImageProcessor
-    ".jpeg": ImageProcessor(),  # Instantiate ImageProcessor
-    ".jpg": ImageProcessor(),  # Instantiate ImageProcessor
-    # Add other file processors here
-}
-
-
-@dataclass()
-class FileDataDirectory:  # pylint: disable=too-few-public-methods
-    """
-    Represents a directory containing files to be processed.
-
-    Args:
-        directory (str): The path to the directory.
-        db_uri (str): The URI of the database.
-
-    Attributes:
-        directory (Path): The path to the directory.
-        processors (dict): A dictionary mapping file extensions to processor objects.
-
-    """
-
-    directory: str | pathlib.Path
-    processors: Dict[str, FileProcessor | ImageProcessor] = field(default_factory=dict)
-    data: list[str] = field(default_factory=list)
-
-    def __post_init__(self):
-        if isinstance(self.directory, str):
-            self.directory = pathlib.Path(self.directory)
-
-        for k, v in DEFAULT_PROCESSORS.items():
-            self.register_processor(extension=k, processor=v)
-
-    def register_processor(self, extension: str, processor: FileProcessor | ImageProcessor):
-        """
-        Register a processor for a specific file extension.
-
-        Args:
-            extension (str): The file extension (e.g., '.pdf').
-            processor (FileProcessor or ImageProcessor): The processor object.
-        """
-        self.processors[extension.lower()] = processor
-
-    def process_files(self):
-        """
-        Process all files in the specified directory using the registered processors.
-
-        Raises:
-            ValueError: If the specified directory is not a valid directory.
-        """
-        if not self.directory.is_dir():
-            raise ValueError(f"The path {self.directory} is not a valid directory.")
-
-        for file_path in self.directory.iterdir():
-            if file_path.suffix.lower() in self.processors:
-                processor = self.processors[file_path.suffix.lower()]
-                try:
-                    data = processor.process_file(file_path=file_path)
-                except (OSError, RuntimeError, ValueError) as e:
-                    handle_file_exceptions(e, str(file_path.resolve()))
-                logger.info(data)
-                self.data.extend(data)

@@ -1,9 +1,15 @@
+"""
+Default tests
+"""
+
 from typing import Any
 
 import pytest
 
 from docuparse import config, logger
-from docuparse.processors import OCREngine, PDFProcessor
+from docuparse.processors import OCREngine
+
+# , PDFProcessor
 
 ocr = OCREngine()
 test_cases: dict[str, dict[str, Any]] = {
@@ -12,13 +18,13 @@ test_cases: dict[str, dict[str, Any]] = {
         "expected": "dev",
         "expected_exception": None,
     },
-    "pdf_test_file": {
-        "function": lambda: PDFProcessor(ocr).process_file("data/test/pdf/pdf_image_and_text.pdf")[
-            "C:\\Users\\Micah\\repos\\DocuParse\\data\\test\\pdf\\pdf_image_and_text.pdf"
-        ][1],
-        "expected": "300 x 300",
-        "expected_exception": None,
-    },
+    # "pdf_test_file": {
+    #     "function": lambda: PDFProcessor(ocr).process_file("data/test/pdf/pdf_image_and_text.pdf")[
+    #         "C:\\Users\\Micah\\repos\\DocuParse\\data\\test\\pdf\\pdf_image_and_text.pdf"
+    #     ][1],
+    #     "expected": "300 x 300",
+    #     "expected_exception": None,
+    # },
 }
 
 

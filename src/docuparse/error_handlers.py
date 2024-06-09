@@ -1,3 +1,7 @@
+"""
+Default set of error handlers
+"""
+
 from typing import NoReturn
 
 import pymupdf
@@ -11,6 +15,7 @@ def handle_file_exceptions(e: Exception, path: str = "") -> NoReturn:
 
     Args:
         e (Exception): The exception to handle.
+        path (str): The path of the file being processed.
     """
     if isinstance(e, FileNotFoundError):
         logger.error("FileNotFoundError: The file %s does not exist. %s", path, e)
