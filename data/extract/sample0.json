@@ -1,0 +1,365 @@
+{
+    _id: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf',
+    pages: [
+        {
+            '0': {
+                images: [
+                    {
+                        rotation: 0,
+                        rotation_to_zero: 360,
+                        rotation_confidence: 4.64,
+                        script_language: 'Cyrillic',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: false,
+                        text: 'Z 1-0  ZOOW0D0 LI]  GRAND MESA AT CRYSTAL FALLS II, SECTION 5  fa < False  LOCATION MAP (NOT 70 SCALE)  SHEET INDEX  LEGEND  1/2" RON ROD FOUND 1/2" IRON ROD WTH CAP FOUND COTTON SPINDLE FOUND  CALCULATED POINT  MARK {BRASS DISC SET IN CONCRETE)  Bxvoaie  MISIMSM SINSHED FLOOR ELEVATION  1/2" IRON ROD OR MAG NAIL WiTH "SENDERO" CaP seT |  SHEET 6 SHEET 4  ‘SHEET 3  SHEET 2  SHEET INDEX (Nor 7 scace}  SHEET 6  SHEET 7  SHEET 8  AR Jay Engineering Company, inc. KY) a PMB. 503 Ii [3] | Po. Box-4220  USU, CRYSTAL FALLS I™ AA  The Noturol Alternative To Subdivsions  Leander, Texas 72646-1220 Tel. (512) 269-3882 Fax, (512) 250-8016  SENDERO SURVEYING  PLOT DATE: 02/03/08 DATE OF SURVEY:  BEARING Bi  DRAWN BY: PC APPROVED BY: PME  O81 W, FM 3626, No. 108 TEL (812) 291-8272  AUSTIN, TEXAS 78758 Fax (512) 291-8279  FIEKDNOTE RUE: NA  | PROJEOT nuMBER: oot-05-007 191 OF 12  Grawiie Fue oov=es-ao7m. | SHEET  ',
+                        ocr_quality: {
+                            word_confidence: 0.8,
+                            readability_score: 70.97
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        },
+        {
+            '1': {
+                images: [
+                    {
+                        rotation: 90,
+                        rotation_to_zero: 270,
+                        rotation_confidence: 0.48,
+                        script_language: 'Japanese',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: true,
+                        text: 'QW 0004 |  tora  NESS AT CRYS  —  [~ \\  1 i  Fe  ceo ese  UB 5.  SCALE IN FEET  = rer Teo vor IN st 3 ours 2 a a nt + a wal 13 sae \\8 rs eg \\g 5 ete ar a  127 74972 SF.  ©  pp 1S Be,  eee Ny —~ Ss atl isa — = 126 Bt 55085 SF als TEemse Bye 8  Lat ¢  geanp HES  a j 3S ps ; 4 Ermer ea ez en 4 ey Se wo 6 i ses sr  J  148.40"  gog18\'07"E |  129 sease Se. Restart  st 2  SY  Lap xt CRYSTAL FASS  ‘poc.| 200100237  \\ 5a2.38°  128  — Sa  1°.  |  130 52641 SF.  TAL FALLS II, NY ®  Lor 8  Lor ae  oT 18,  MIRADOR, (80" PRIVATE STREET DRAN. & PUE)  425.97  N30\'02\'53  SECTION 5  GRAND WESK MIA AT CRYSTAL, PAILS BoC. z0csa0050  cor 4  | 72188 se. {| MALEOx. Lor  / / / a)  7ea14 SF,  138.30" 1373.20"  SS225\'0R"w  24 90708 sr.  S28 14°53\'W 291.29"  PARKLAND Lor  99.1236 Ac. evY GF Lean you. 10833,  / f f / f / i ls 182.96" 5 — fa NST 40\'sa 2 1ezast 2 FEMs, 100-vEaR} FLOOD PLAIN SN 2s.009 sr. PM" ore oF LEDER = YL, 11251, PG. 7105 | js | 4 Sree IS J ] 207 ACCESS pag | SENT 23 3ee6 SF. ee Let i 2.0957 Ac. cay oF Leaner wi 11251, Po, 1082 (Beg) Som I: SHEET et Egy RY 02 OF 12  ',
+                        ocr_quality: {
+                            word_confidence: 0.3,
+                            readability_score: 103.22
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        },
+        {
+            '2': {
+                images: [
+                    {
+                        rotation: 0,
+                        rotation_to_zero: 360,
+                        rotation_confidence: 3.92,
+                        script_language: 'Japanese',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: false,
+                        text: '_ Zoole 0004 |  i}  GRAND MESA_AT CRYSTAL FALLS II, SECTION 5 ws D| xs  ] — tor ot GRAND MESA T/aT CRYSTAL FALLS: ~ “ “|  Lor 19 ‘  | ‘oc. 2001077580 |  / SCALE iN FEET 3s  3B Lor s  3 58254 SF.  2 rt  Sa ity liad Beh, a gas 3 Lie 2 Lf ts wesis se. EFT? oan se & / 2fghh craw vega ar crvsra. FALLS BS ae oc. 2000000%8 Ay > co oi f & 74085 SF. % ty g/ a) ee fi wen Sf a aeser ee U a Lo EB ee A 2 |e ya 5 3 \\ par FRE a a 1 247.01 ; i tog 205s tf ds 8 jy LAS i i {| ear conse al Teas = 5 — i ema 2c: f a 9 8 of [fee 7 “20 apa J e ae L, / Jy cal 80 BL. 8 S15 oe =a Se Ae 58, ate OO HST Na Pew Fy / = EP 2 i 1 Is al 4 pare Pe ot —~— =~ / fo eter e ! colar 2b eps ~ “Re tree sean fe AB oo tn FL ry ee ps By Bf] 93 BRE sa Seo aes e a EB}! soca se. op it 8280 ta tf BI Ef Hee’? Seg ear ~~ S fb a8 es ee iy Bart Ea BP a6 aa 8 fe ie |? E { 127 Piped 98 i] ‘74972 SF. 213 one Se | " \\ 15 +l Sere lS 8h = z 3 pa ES  \\ cars  126 p5z65 SE.  125  ) 4683 SF.  c ee LA. SHEET ieee gst E05 OF 12  ',
+                        ocr_quality: {
+                            word_confidence: 0.38,
+                            readability_score: 107.82
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        },
+        {
+            '3': {
+                images: [
+                    {
+                        rotation: 0,
+                        rotation_to_zero: 360,
+                        rotation_confidence: 4.82,
+                        script_language: 'Japanese',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: false,
+                        text: 'Lod OU |  GRAND MESA AT CRYSTAL FALLS I, SECTION 5  /  Lor 92  tor 1  / Lor 91 ep y . Lot s0 \\ LoT ag al af ® \\ 3 hf \\® © Lor 8s S a me & SCALE IN FEET > 1m 50 00 ‘ LOT 87 >  10 GRAND MESA AT/CRYSTAL PALLS ‘ot, /zoannaaig  Lot as  I> exe. vores SS Sf] Deane rue) A j / aN SPST an * \\ BB al fi? f / J AVS S) | yess se  aifal fey 93.08 / wir  eal e508 Shy ac 1  Posse Teak 3 “ap, (60" PRIVATE STREET “Oy 2,0 DRAIN, & PUE) 4  626 i}  aR  r  @  1 o 58.68  e128 I:  ail  1540 153 & ‘ 5 . ae | a > Oe, 2, ar Z. ee Sul LANNE 11 | 04 OF 12  ',
+                        ocr_quality: {
+                            word_confidence: 0.48,
+                            readability_score: 107.52
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        },
+        {
+            '4': {
+                images: [
+                    {
+                        rotation: 0,
+                        rotation_to_zero: 360,
+                        rotation_confidence: 6.08,
+                        script_language: 'Japanese',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: false,
+                        text: 'ZOd(o ODOH |  GRAND. MESA AT CRYSTAL FALLS II, SECTION 5  GRAND MESA /AT CRYSTAL FAUS oc. feon.00236  SCALE IN FEET  LOOKOUT PARTNERS, LP. noc. 2000162835  76027 SE.  BACHELOR GULCH (80° PRIVATE STREET | DRAIN. & PU)  lor 92  16 97738 SF,  ae  ake ok  0 52323 SF.  15  “eae,  ¥ 98 Sg 28 ee ee  é eo  wee 1s 268  osr2e SF.  ad —ees  3) et  4.30  SHEET _| 05 OF AZ  ',
+                        ocr_quality: {
+                            word_confidence: 0.4166666666666667,
+                            readability_score: 105.96
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        },
+        {
+            '5': {
+                images: [
+                    {
+                        rotation: 0,
+                        rotation_to_zero: 360,
+                        rotation_confidence: 1.27,
+                        script_language: 'Japanese',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: false,
+                        text: 'L009 0QD4 |  LLS_U,_S  5 & EN  ae 7S \\. a fs f i E \\ \\ \\ \\ \\ } / \\ \\ \\ \\  1053.85 AC, (TRACT 1) LOOKOUT PARTNERS, LP. bog. 2000362836  SHEET  06 OF 12  ',
+                        ocr_quality: {
+                            word_confidence: 0.5294117647058824,
+                            readability_score: 107.38
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        },
+        {
+            '6': {
+                images: [
+                    {
+                        rotation: 180,
+                        rotation_to_zero: 180,
+                        rotation_confidence: 0.13,
+                        script_language: 'Japanese',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: true,
+                        text: 'Zt dO £0  4aaHs bot oO os oor eer ay « —  EBL “Se “ZeLEL “ON, ES @) ES  ‘d°7 \'SHSNIMWa 109007 ‘Ov BBZ\'981 JO NOUNOY  isp the  SS : \'S 2g!  > 4\'s 25500  AE a al is 6LE Soe ie Dass yy  mal yaa aA te i 7 apes “Uys sex AK of ‘s & be- ~ ee a Te SAE {i ® 4 i ae VA  bret  e an J yy by  u\'s eects  \\ 66 | : | \\ a wag — yf | Hy m5 » A (it a | an ; 7 Rn Sens Ub La ee é be | sous Hf! I fel i OQ yr ae % BBs ses seo. | iy DN 3h 201 a lx alte “a see fy 1] 8k  rea A NOILOGS “Tl STIVA IVLISAYND LV VSHW GNVYD—— ae ‘\\ Sol IY sr ysgs OT  THOCONIANT ',
+                        ocr_quality: {
+                            word_confidence: 0.6,
+                            readability_score: 90.26
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        },
+        {
+            '7': {
+                images: [
+                    {
+                        rotation: 0,
+                        rotation_to_zero: 360,
+                        rotation_confidence: 0.59,
+                        script_language: 'Japanese',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: false,
+                        text: 'a a > 5 k “SE WFE“ GRAND MESA AT CRYSTAL FALLS, I, SECTION 5-—¥} ° a 6 IGE S Se Brey 74972 SF. : rd YOM ;  SKE Ne 182.89" wy  127 da uy a ~  2 i ® G FEMA 100—YEAR| FLODO PLA HPs BL 8901 SF. al 8 BE 3 28,608 SF. SVE 0535 — | 3 a m4 oN, (EE a EN coin OF LEANDER i ~~ SF LL "| 8 my 0% BL IS vec 28s, P5105 \\ aL. = ReeSrarw yeh | La B°a8"E LE 126 5" 4\\ \\ 5208 2  eo i  3646 SF, /  2.0057 AG. Cry GF LEANDER VoL. 11285, PS, 1082  1  322.08  ho i088  . 130 | S 52641 SF. 1 2 i Ph k Reerorw ge Sh 2g A \\ Fs 4 /  f I Ss \\ 99.1236 AC. Sm OF LEANER \\ you, 10833, Po, 1385 \\ ~ ~ 120 “\\ 66082 SF. N a N\\ ~2o Ne ee N 32> 3p \\ N \\ \\ \\ ° Rey My ss PEAK YY an Ut Vi, & Mg Re is A oN 5a74B SV. BS. . 20.5825 AC. fe Oy crt” OF LEANDER XS. xf VOL. 10833, PG. 1355 a ONS D> ka eI oa, PORTION OF 186,209 4c. LOOKOUT PARTRERS, LP , VOL 13122, PG. 1933 é "3 “oy / SE 20.5826 AC, CY OF LEAKD: vol 10853, PG. 1555 SCALE IN FEET 4 = ——— sas SHEET 10 soo oo  tA 08 OF 12  ',
+                        ocr_quality: {
+                            word_confidence: 0.54,
+                            readability_score: 102.41
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        },
+        {
+            '8': {
+                images: [
+                    {
+                        rotation: 180,
+                        rotation_to_zero: 180,
+                        rotation_confidence: 0.83,
+                        script_language: 'Latin',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: true,
+                        text: 'L 40 60 | 200-so-100 2aanAnN Lo3roud {6428-62 (21S) XVI Brd8é S¥XA1 \'NILSNW 2 g Teee-18z (Eis) HL SOL ON “92a Wd TM E18  SUOISINIOGNS Of PANJOUJA)/bY /OAMON SY] — soeese (ers) ¥ea teneese zis) 1  SEBHS | sacoo-s0"100 Siu ONIN (er) sea canvases) es | "Y AA ru aos sa all STIVA TVISAUO ast | UG [- Dd 708 GBADUAEY ‘ad “38 Nivea ourazasiis : “au ‘huedwiog Buyesuieug Ker VY  610000002 “oN 90d ‘sisva ONE  sor ‘honges ugauns 30 ave | SOI=.1 TWOS _90/¢0/20 ‘Lv LOI Se  EAS AST A PA Sa cE7r.08S Las 30E S575 | HOSTSC_|esio | _AGROLLN | SPELE [ABER SOUS ISLETS | eo ERIATA Eze] cA] aS%S__|_,82,00-14 |efio 1 Mae, ZOFEN eer a Ma) RSE EeEiL ‘Seer WERT east [erie | neeeeles Tt _orst erat | owe eee | Fam SHIGERSIS OF or i ae eee [ori | ae seles |e | ereet | poor |S heeee | reo FOREST EL —1t— Ee DOCS | “30 uS2jegig | —sezemts | —orzsr separ} oo ur __| Sener | cos Sree aber <orey sete [sizes _feaig | s0ooezes | —2roor _| “ez tot | om 00 Tazst_|- 169 FBO LET | OTST Teast | esc [or chor caro} Ssoceaes_} eee FS A ES TAOE,LLZEN aeEST arose Seste_|.88.22.0 [egig | M02 RGN TFS Ec 2 a a I AVSLGCOPN eros Aa Sea S7esS [esa | Medecan [ar er Bo 5- 74 a Te oO STE azo [NL RLS Fea ET OO Uva ae ‘ornare | soe | ces TTOCeSOS pases setae ar trate [gio | Mpeg | cress | _aveet_} _avod—[arsrst_| ova If, 22208 | —VBeL | — te ror | Beat | OWES [eso | aPI.cOzeS as arse a A TE Ersorars | —asvet | aver [arch | peter [gi | aezcoses | “ee Ser $e ne LO 7 S¥0.20205 3ESE Se38 | peziel—| ooo fora | a zt ra.ecs aCEE eeed | sete Jers eo Sret0a0s —|_astsr | —eease | —prziel | stots asia | svasames | —eriee | arse [sete eaer zea EET arta | — sere] 50ze | ors ees [ME CTI ET Ee [era |e ee SEeeaaN 2059 <8 SETIBL | ¥ESOE [1519 | _meISOLOSN |" SeVeL | SUSE Pee wor acter aon ress | 206 17a SFOR__|_PESORY_Iggig [MLE IU BH 28008 | — cee | — soo ra ao E137 = UES TO NIE aszeT areri—| ater | tera Wge.EETEE [STE BETE BOCs [los seat fecia_ | 0v.s0.00s cca ety [aaa eae [oRtnsizsn—[—“oere BOE “eo0a | “tosez7 fossa | _—s.eesaoevs | oarer "| 7a Ser |e o0e eer TG MDS —| Bees [aves | — seer — | tr coe eets [er BSH acs ear ‘oytat fp Srecee Tes ETA 75 TA 4 PA OT SLav.GEaSS BUTS 30S | Oe | zLazL foslg | ASRAPSEN | —seUST | —srSst_| —oote1 | -s8.c085_| 95 WePELbBrN [PPE SEV [ OL TSE ves SBE ZE TON Ber | Set og} 2z.5e.0| 299 WEYEBL BCA [ELE “| SE | Oe cae | 2 CORT fap S| COTO Fa 7 1 PAT Ee A 1 EA TT AE 5 7 PCE ASS TEROS | TE ZGLON | eee Bete ‘DOaeE Bio [Ree cews sree} Spee st | ess BLES _[ ae HER LSOIT S630 PRCT ORT rig] Sens ES S05 era SegET [asa SeCae.aeS F107 CA LT 7G EASA “O58, 076 Seieeer |e TeIZGHEN CS “eT “BODO $Fid-| MSE OSE a F5F6 Sezeot seo AiZEETOCN tT [ausssres [eras | rest | 08 Boor B00 RECN [ewan ee cr HELP ESS jr TrID [RST ASSEN ZEW ETS ETSY ESE] (eno arr “ser | 050007 OFS [RSE LOSEN acd ca WT FOESS Sere e.1es—}— 1957 1Ft | 00 0007 BES [SELES acy x7 TCS, 10.0 (canvas aren ae ze1-} 00 0007 weg [SEH eS aes TOSSTZES 50.020 | —Br\'B0e |e 500} otro ZE19- [SR POEUECH Cai aoe LATS ROESLAS 3.5L DEES oe¥eT | ON eT" ~eo SOE S¢10-} SB, 095H a ACs —[ Os sOET BoE EOLES r.20ErS | — aU] are | co ET [ecco acne Ree x06 [ov 00st SEOSSETE Tae “var [oo] {ecig | SSOFTEN [zc f asec] — 0st sg Tze a eeTE BOO tery | leceaen peri} ste] on aos WEL. SOESS ERRATA ecal waa eer oooas facta ES AT SPN SET tts <cp cust RFE SOLEN EXOT Toma mCcIS “‘BO00E Tae EGS TSE eer SO ONST REC SPSS STEERER S0Sr SUSI ‘0005 Dei5 | EBOSZEN 3088 | co cast TLE. TSBPN Rerig asi OU Belg [SESE Fear | estes TEE TSP cot | eo | — ooo aso [eig | Sree sen BUSS | SSTST EBP.TOSC TOTS ra ODO] SteeE“Yeeto [Rew ZEEE reer [te o8e Se vzN—| — ee I5TE woads Te OFZ [seid SaeL eS TN reesei [eect Se isves | e078 SECS |_O000E [eee Teri | — ave ere ra a LE ASOSESTS | TELS [AOL [Vase [ooo "eee ee aeig | ae B.nen SEE — ato “Eresetes ASLFLIYS | aw Coe [zo ene] — area | eee [eer | ra eeen Secs —\\— owes TR ION SE FOS “FO 2F0 pl 3a “SreF [to wos ARGUES O1.SomN | pr ere“| era] one | eee Toei | mvc oozes esr} avr SSSLESES 50.5F,5N | 585 Ea gIE | aoe [ote facia | — eee cores eer Teey—| 00 vez AETSTESH SOercen | eer [ae ee Poo es | Soh seer [etia | —_mecscaes[—oseer | —teerr |} po ae TOLEAF 06, OTH SES SEV [norte 0. [ati RSS| se] — aa tne ASE SEIEN 3.5S,00.55N was Set ZEST U0 DOS ~SVTP.SE | ELD HOT, (Tes “OBOE aT BOE, moe aeeT TPL OF .BeS aC OFEL eet err DOWE | aeeee gig Tse RS asec [asec] oe eee TIE BSRES SACBLION [se eT_| ee | — ooo | eee ets aroes | ore Bez <oeg2t—| Ze 9021 25 SFR ELEN [Scere Tee seat pee Ones Oth ors eee reese tee] eto Lae FESO (Cicero rs ICO] — po noe | ze oR Tet [TES ITE |e eet | Oe] re tesa SOBER [nczece.rn errs ar st | BODE [SERB BE_f ecg PS eos —| areas] —aeeoe | teeee aes HIG BOSES 5 PC SN LST ATT Tero Loser ror eeer SOtr | 0008 |“ SOSTH_[oris | RvEzORSS_| BF eI} — ore | over} eae eS FEED SEES Reps aeS pee Eze BO DOS | LUOOES [ona | _mceeeses TSO SOO “OOCSEL_| aos Tees 3,00.69.575 (omecaraes {86 eu DORE | BOREAL feels [woes | ere rigs 5a a AR a RESTORE [RL eeoes pores RE7S_]_00008 _|_.80,885 [701s [RSLS | _—_ LO S <t089 000s] thet | oe HeCSLOTES (CORCORS Ses Tere Ra 5 PE OTE Seis |_ ovat] sercez_| ei ALCS. LORES SORE arier_| seit noes | SRE ET “enia | AL SES [FUEL | or eee — pond | cortez Pats TLL OOETS p apritae A TT a Fa PL a LT TE) REL IPESS Zh COLPS weere pe cre OO DSET =SteSl” | entg AGE ETON PETE Aika Seay ~}?.50.57 [915 Ta, av eh LEN 30S, 0057S OSs <IS¥6 "| BOOST [~SdSOE—Ieoig [Ree Fears Coit anal eee eetee [S202] 19 srz.02z0N ESE LLES SESE ASE} OOS | .OSARB POLS [Se ZOOEN | eo tor ~} “zr —} sera | sereae slo TROSSTZES SEreNiee a cE BODE | a1882~fggia | ser tests —| “arene Puen | ress av eee ei TET, YSREW SaCSESES [arse teen | 0000s | conv) een | areas “VE 8 OEE | F800 | Zio TEL PF IES Sis 200k | ~“oceat—|—F es | on 00s —| er. ceat [aes] te OF 7208 “eee SEs5 | oocysts SonrEss Bre e-1eS~| ese] cesT [oo | ares | cer | eRe |ereme [a o1 7 PCE TE Spytosacs EEO oH [ERT EEO ARES | Sas EELS | — OSE | aes ares seme | aS Ac eSaEN SSE gL ES |Z eOU J — EUW | ons —] pore | wes Pees STO [ oes Poel | 05.2001 | es Face ESP ERCAURT Se ZAG HEEL OOOO | .r.808 | ved twee TEST aug Ser | .vaBeae | ia yee ey LEN ERAT a a a WOUS _j .te.arae_| ceo ye er OoN SEUE Sete Bro9 Sarieey [$a 0c g520N APES BES Rvac4 wes LOT CUE IS IET ‘od, MIC ETON R<acas ae art lest 35,7595 EJ 53 Zezen HeVe SBN | aE 936 Owe [ ENR | eo peas | eae a ea | seer eo |e SSsG250EN RAT. SPLES [eS eT SELENE Beez | ao | RRS |—BGEY | apes erase] ever] o TET FEDON MeBY,OFLEN [ee TE mks DOO [#0825 “| ge [SIT SES ai FA Soeroses (moe cemen az Bete [000 | eras or Tae [Se open —| area tee os — | eee 19 Sonecaes (CSNbiae 804 dwOHD Dw Snir vine {ON | oNiYsa Gaon” | —“oubHa ays SBnvisi0, | NOLES —f i Teel Sauna f Sev NT  G NOLLOUS “Il STIVA IVLSAHO LV VSHW CANVAS  | hOQO TY ',
+                        ocr_quality: {
+                            word_confidence: 0.28,
+                            readability_score: 83.33
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        },
+        {
+            '9': {
+                images: [
+                    {
+                        rotation: 0,
+                        rotation_to_zero: 360,
+                        rotation_confidence: 1.95,
+                        script_language: 'Latin',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: false,
+                        text: 'LODLLQ00Y |  GRAND MESA AT CRYSTAL FALLS II, SECTION 5  [_DRARAGE EASEMENT TINE TABLE CURVE TABLE H NUMBER | DIRECTION [DISTANCE MO [petra] RADIUS AG |_GRORO [ERO BEARING | No. [BEC mos ARE CHORD __| CHORD BEARING. | 13E Raror ae" | 46.28" eis | ase) 395.00" Bit 35.57" xagssizaw | C263] 73058" |_ 470.00 163.68 143.08 NaFOS ITE, 80. nsé-7620"W | 78.55" ci76|_2r09\'12" | 798.00" 86.14 268.65" narss\'asre | 664) y300\'33" | 950.00 926.56" 126.25) Nazaeere tei sisi7ssw | 65.65" iF? | sw a0\'o7 250.00" 2.85 6235" ssrsa\'oz"w | 0285 yoo\'%g™ | 530.00" 18.55) erry NSeSEOT"E tee 5es4531W | 72.56" Si7a| 1a2g\'ee | 275.00" 58.87" 69.39" natavosw | 0268| #5047” | 570.00" | 4820" 48.20, NSZ 125475 C83. NB721\'55"w | 30.86" 3 C178] raa\'sa” 3780.00" 87.49", az.48" Te T IEW. C267; igaa\'si~ 630.00" TL SB. Las N2B\'38350E ra T nesoqaaw T3750" yao | 09°36 1720.00" va 64.84" 2 00\'S3"W. 268 | 9445" 570,01 85,62" BS.82" N25°54"48°E  [test wizs2\'s0w 126.22" 181 | “srat\'s2_|_ 150.00, 151.04" 14.74 Now izantw | C268] yos\'ai | 630.00" 32 3a2t NOZSSIEGE it] Noeirose | 53.15} C162 | anes 60,00 47.53" qivezeew | <270| 10047 1330.00" 74.08 | a7" s275249W isy, nsesszse } pi7o | Cva3 | "675754" 50.00" 82.87" NsS0S\'Se°E 271 | 34°05\'59" 270.00 780.58" 158.05, S3823°25\'W Tee Ne5TAME fF 1466 FE iad | seer 31 50.00" 35.75" S88-05\'50°E S278} 91°34"30" 330.00" 323,32" 122.60" S405 35 159 Nea’o3tipTe | 89.04" Cras | 4550537" 60.00" 162.61" 718" SBS 14W C273 3437\'08" 450.00" 21.90" 267.78" NAO\'O217°E,  170 navssze | 63.83" cies | s50s\'s3" | 90.007 B55 85.25" nogsoszw | ¢274{ 277129" 1 s10.00" 193.06" 197.80" Neg 1017-E Ti nses2%9" | e126 ca?) es7as-_[ 17e0.00, | 143.79" 343,76" ssssrszw_ | C275) 1a0s1e" | s10.00" rong 125.52" NITSSTBE e imsease [asa [erae | arasceon | 1780.00 | 142.75" wag" Seg2rigw | ca7el_oisse 1 sip. 00 50" 2.80) NZOTAI42E noes osw | 58.47" E198 | e27\'0e" | 4720.00° | 2ei.22 | 28080" Seougosw | C277} 2128" | 450.00" 2 wz. N2U5759°E wosro7\'49"e | 100.68" 196 | es9\'10" 1720.00" | _298.78\' 299.40" Setrae77w | e77a| agas\'s9" | 50.00" 70.54 54.85 SOs40"187E wiseasos | 39.51" cxat | s17\'08" 1780.00" 184.97" 164.15" Seeze\'4aw | C279 59,00" 14Z.04" 99.00" NBI21 37 sisaesow | 603e | Graz] erwor | 1780.00" | 193.64" 191.55" searigw {| c28ol traiais | 470.00" 145.78" 143.22 sores arw | 06.07" Gr93 | 1359°70" 130.00 46.35" 48.27" N4547\'52°W cz61! “ie66\'o7 $30.00" 187.45" 166.75 | S8S\'54\'35) 99.25" cree] 3e01\'25" 190.00 [126,09\' 423.29" 2047 30°W eee2f 967" | 470.00" 9.97" 3.97"  [sseestaotw | 5.60 cies| 225" | s9n00" | __ 733! 738 Nogag\'so"w _f_6283| “rza\'0s" 1550.00" 13.55" 138 samayrare. yoso717\'6 | B66" cip6| Tor te<7 | 60.00" 126.08 105.10" ogztasce 1 e282 | 20 4709" | a8. 35 153.027 186.15.) NSeo7 20% necaa\'edw | 45.38" cre7 | 3a7s33" 159.00 37.09" 36.51" Nz 17536, C285 |" 4a17 26" 378.33" 292.48) 285.25" | Nay\'s2-257w NBS25 767 | 36.25, 198] 3471508 | 60,00" 146.07" 113.58" Sorsesee | Cza5] rss\'2 378.35 12.70" 12.70" | _NzzSes3"¥. NaS OO\'SI\'E | 65.60" e199 |" s52417" 130.00" 124.17" 118.83. Narosea\'w 287] esa 323.58, 38.45" 33.43) | a aizosaste | 52.57" e200] e360" | 1720.00" _[ ta7.29" 187.39" sores | G28 | grees7" | 375.55" 158.07" 186.45" E wagers | L7e e201] as\'a7= | 17a0 00" a0.03" 730.00" ssrisiaW [6589 1zasos7 | 325.55" 1.89" Tied | Sarss3are soz iasew | 36.65" e202] eas\'a7* | tzeti.og" | 1s0.08" 150.007 S2e2ss2w [6980 | 1was\'3e7 t 440.00" aed e251 {_Nsr3621\'W SarSes9°w | 175.77) C203] eng’ | 1720.09" | 130.0% 7130.00" sesisrw | coi] oeaa\'ap” | aang ie. | 155 | napa sW Sizavosw | $8.20" [Tes0e | Torae\'s0" | 1720.00) 22.45 22.45 srrseisw | C292|"ss4s\'36" | s00.00" S20 307.16 Nae OS ASW soga7\'ssw | 59.71" 6205 | restaa™ | 1700.00 54.257 56.28" yoetaiw | G2a3[ 2165" | aan. 00" 5144 q7aa | wo0\'sz\'0o | sesagsiw | 91.95 C2081 1-29\'45" 1470.00! SE38 38,36" nzvop\'este | 6294 | “Spa13" 270.00" Baz1 | 2420" | spa26\'oi% sarasis\'w | $7.08" 6207 {e507 | 1530.00" 87.28 87.25 nassi2ae | 6295 | oP | 330.09" Biss i sias" | ssese\'aste NS 28107 | 74.58" 208] S516" | 1470.00\' 13597" 13h" neezo1se | 6296 |iBer\'aat | s30.09" 145.197 144.76 sss OSes  us| nsso\'arw 1 29.977 e20a{ esse | 1630.00" | 372.99" 12286" ngros‘osre | G2a7|“isax4e" | 470-00" 198.75 128.35 NSS10\'59"2 | wae sagss\'sa’e | 60.007 6210} 5\'50°57=_ | 1470.00" 150.07 _{ 350.00" Narse\'2t-e | Czas] Tossz2t | 69.00" anaes f95.61" NSSOUSSE  [iss 1 sostsz\'os"e 183.60" ezuife2e\'s1= 1 tsso.00" | _1zo10 | ap07" Navas rae | C208 | sr2et77 | 60.00" $5.90" S241, S45 7838 ey TUNAS5S43°E | 70.00" t212[ Faa\'35" 1830.00" 99.98" {9,83 N3S"45\'27°E C300 |" ep04 31 50.00" 71.28" s7.r Sie29\'6w tay | ssrspea\'e | 72.00" Ge1s}_sraaran”_| 1530.00" | 300.00" 39.09" NSaSO/OS"E | 6801 | 74\'7e\'s37 | 60.00" BO 72.83 sos4s\'s7w  4555437 | 70,007 Epa wae 1470.00" | 160.08" 1160.00" Nars70n7 | 6202] Tas net | 350.00" 99.18" 3667 Suse SI5SF30E | 136.46" 1830.00" 39.52, | 89.60" Nasiaare | G303[seos077 | 270.00" | 170.15" 167.35 Sieasere | NE-O8"S5"E_{ 102.95" 1470.00" His. Nesivod\'e | 63047” 93210" | 270.007 2.55 285, sar7ee2e | seea7ag\'e | 6a.se" | 17550.00" 9.27 t nes z\'se\'e | 305] g\'07\'52"_| 270.007 90.15" 23.75 [Seog Z7W sase2e\'e | at.55 [S18 sceatte 1 1830.00". | 98.91" nezesse | 0308] 190762" | 330.00" Ts0.18" hoe.6a | sore ariv woose\'sew [42757 enia[ ese\'s TY ra.00 oe {_eegsvage | ¢307|_grss\'s77 [330.007 420.37 119-701 NEvOSSe | Nowsd\'s2E_ | san | o200| sae" 1 _tss0.00"_|__95.48" e308] 2071712" | 370,007 25.60" 35.107 nscar ore! 3528296 | 95.77" coat | wae\'s0" | ayo aso" 14.07" 308 | sresas | 60.00" 39.54 seas nsxisige | Sovpo\'en’ | 74.717 Go20|xos%5" [1880.00 | $4.93" 54.93" segzesere | e810] 6754057 | 60.00" 70.78 65.73, NES SATE sowo7as\' | 53.24" C233 | 150232 120.65" 120.437 waggrerw. [6311] seig177 | 60.00" 52.10" 29.37" ‘Suoe0\'s7e Tis sogss\'1 hw | 51.67 (ooze | zsse\'s3 67.08 63.23" aaropsrw [G32] tessa" | 60,00" 124y 102.281 5728240 Lies ssoosizw | 93.26. C335 | s08710" 15.88" SEATS siasaerw | C315| i235" | 60.00" 19.24 12.16" NSS826"0 tno ssr2vasw | 44.70" [ord RET ETSE 307.08 | 106.60" Ngsz7s7w | cSt4| sos" | 530.007 sat" Bae" n2e4g05W ina | sawasos\'w | 38.67" Cioa|449°3s" 3221" 38.20" seeisire [css] se25\'52" | 330.00" 221.35) 217.2 Naesr2Rw | tia | ss02713%% 228] 24440" 4501) 43.50" ngpis‘sew [G36] ss2103" | 270.00" 260.B4" 2eo8r" Nerseus Lis} s7yast3o"w caso] 538217 46.28" 46.24 Nasassow. | e317| igir1e" | sano" 75.95" 73.33 _| ri  [_seaas10\'w bast] it y4\'20" 21g" 2.08" Nssoa\'so"w | e518 270.00" rn 2520 1 we gin w  Siz0s\'sthy casa] agers 41222 azar, Nawaxoarw — |_C319 330.001 2.48 227 | NOTA ase "4°E C835] TF aees" $2.96") 62.65" sarseaste [76320 | se07%s" | 270.09" 1179.28" 176.01" i NOS\'5S\'59°W 501-2547 2341 1904/35" 103.87 | 109.38" aaxe [G32)| 25as2e" | ss0.00 | 136.64" 135.66"__i__Nr708:30°W S27 56230 £236] e184" 105.27" ioeas sizse0s\'e | e322] 6110s" _|_ 60.00" [64.27 aria saris 0254050 j 256{ o0e\'s7* 1 270.007 137.48 138.96" somss\'sz | 6325| szse2" | sooo" fesse | ea as sos sssow 5352620) 6237 | 1g0420" 1 330.00" 6.81" S556 sorosasw | 0324| see\'s" | e000 aoe" azao | see\'s 11553333 E238) ssc\'ae7 1b 270.00" 26.64" 2585" somasior\'w | C328 | aster\'oe" | eo.00" 93.92" 862" | wigaa\'6s\'W [sense C2581 “prsa\'s4" | 50.00 7.04" 55.97" siaaeose | 6326 | 20s0«" | 770.00 97.79" 97.25" | SBB41\'5O°W sigs } c2aG} p73a\'55" | 60.00 70.84" $6.20" sexissew | 6327] 273509" | 330.00" 130.18 128.3 _|__se7a6\'18° SSE0B37E H zai] agiara7” ) 60.00" 48.00 47.58" xegsrosw [e328] vsvos" | _ 270.00" Bz B72 SIF 25650 SBE 4B 54" i G2e2{ <051\'57" | 80.00" 42.79" 418s ft NaS de 6390 | 9°36\'007 530,00" 38.80} B70 Nar 36115 (eea3|gpsee7 60.00" 20.58" 76.68 §330["iz0s\'07" | 530.007 111.85" TERA Sers7 28 {oay | pesa3e" 3} 6n.00" 21.80" 82.59" E331] 2+\'50°00" 470.00" 178.10" 378.02" MAT 23156, (Eis [Cassese enone 22027 5053837; | C3321 17-2R\'24"[ 470.007 a3 rari ones [~20na\'ag 60,00" 4187 ET Ara Sao S353] 1e4R\'10" 520,00" 138.83" 336.55" 87 | “spans! 50.00" 5955 35.6 nezaeaaw | cass) 1ag7\'ss | 530.00" a0.06" EERE i en00" 26.12" a7. 54" Noy 1S\'26W aese\'4s*_| 470.00" 336.6o" 33620" + 1930.05" 25.82" 25.62" S2108\'02"E 1zss46" | __ 530.001 326.65" 32883" nseorare | 970.00" 156.60 156.45" S2507 07 1sss46" | _ 470.00" 354.26" uss Nsearsore | 7030.00. 166.88" 164.70 528 18°36" S683" | 970.00" 35.00" a8 ssoososw 970.00" 355) 35.75 530742\'59"E Taya 30.00" 55.58" B58" roe W yo30.007 is75) 15.75 S31:20°05°E sree [550,00 76.63" 75.52 saesooow i 1030.00 oer 140.59 535405978 wwigi2" | 470.0" [3.2 rer Sarsesew {970.00 205.12 202.75" S5748\'16°E wei0%6"_| 60.09" 18.06" 1835 sores sre 1050.00" 33857 238.26 $45:26132°E rata" |_ 60.00" a.53 20.25" Saba 37e 870.00" ya7.ig | 347.05" saa 07 OFF 60.00" 138.82" 309.87" S87 26\'39°W 1030.00) 35.00" 2.87" segragisote [e346] szes0\'24" | 60,00" 135.97" 106.69" NIB SESE asa Hesrod | 60.00" tis. 36.87" siresase | 63471 50530" | 1780.00) 95.02" 25.00" Sas 1/8576 2601 460128" 60.00" 42.77 41.87 Nepze\'si7e | _c381 4a7\'o47 | 1780.00" 738.25" 136.20 Seog 38 e251 [ 1075s 18" |60.00 107 78 ass |. Niaseser Lesa) Sarat fyan.an" 208.50" ‘28T7 33096) (osesT” ares 10" FP Ss0.00 357. S57 Nsgsoase cas; saspas" | 90.00" 22.56) 2138 MinaEew  lan PLOT DATE: 02/03/08 SCALE: + 77 [DATE OF ‘SURRY: Febrwary, 2005  BEARING GASIS: Dos. Ne. 200000019 SENDERO. aap tats aarp SURVEYING DRAWN BY: PHC APPROVED BY: PRC PAB 803  PO. Bor 1200 CRYSTAL FALLS D™ LOE ~ |e onore ALE Ka  Leander, Texas 78646-1220 ———  g01-05_B07P1 Tal, (81 259-2082 Fax.srai2snenis == The Natural Alternative To Subdivisions DRAWING SLE: GO1-05- 00774  eS  ($12) 291-8272 Gxiaar 911 W Fl 1628, No. 105 TEL, ($12) 201 AUSTIN, TEXAS 76748 FAX (512) 291~827a| PNOUECT NUMBER: DOt~05-007 | 10 OF 12  ',
+                        ocr_quality: {
+                            word_confidence: 0.52,
+                            readability_score: 108.09
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        },
+        {
+            '10': {
+                images: [
+                    {
+                        rotation: 0,
+                        rotation_to_zero: 360,
+                        rotation_confidence: 0.64,
+                        script_language: 'Latin',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: false,
+                        text: 'Z-00W 0D |  eS  GRAND MESA AT CRYSTAL FALLS II, SECTION 5  PLAT NOTES  eps  soy  10.  un 12. 15.  34,  18:  16.  7  18.  19.  20.  a  22.  23.  24, 25,  26.  27,  Jay Engineering Company, Inc.  PMB, 503 P.O. Box 1220  Leander, Texas 78646-1220  Tel. (512) 250-2682 Fax. (512) 250-0016 The Noturel Alternative To Subdivisions  Total Acres: 244.112  Number of Lots: 186 Residential Lots; 4 Porkland Lot  1 Moitbox Lot Number of Blocks: 7  Proposed Use: Residentio!  Owner: Lookout Development Group, LP.  This subdivision is wholly contained within the current corporate limits of the City of Leander, Texas.  Construction of improvements within this subdivision shall not commence until ‘ail applicotion permits  ‘and/or Construction Plans have been opproved by the City of Leander, Texas. All public improvements  shal! conform to the current Zoning Ordinance of the City of Leander, Texas.  No fot in in this subdivision shall be occupied until connected to the water distribution system of the City of Leander, Texas.  Restrictive covenants in the form of a "DECLARATION OF COVENANTS, CONDITIONS AND RESTRICTIONS FOR THE GRAND MESA AT CRYSTAL FALLS SUBDMISION” ore recorded in the deed records of both Travis ond Willison Counties.  In order to promote drainage away fram a structure, the minimum foundation slob elevation should be built’ ot least one foot above the highest ground elevation within five (5) feet of the slab perimeter, and the qround adjacent to the slob should be sloped awoy from the structure at a slope of 1/2” per foot for a distonce of at Jeast ten (10) feat.  Woter will be provided by the City of Leander, Finished slopes which are greater than 15% connot use surfoce irrigation systems.  Twenty-five foot OSSF setbacks ore required from all drainage ways.  Twenty—five foot OSSF setbacks cre required from all finished slopes which are greater thon 30%  All private streets shown hereon end ony security gates or devices controlling access to the same private streets shall be owned ond maintained by the estoblished homeowner\'s association of this subdivision  AS fost PLE, from ali side lot limes is hereby dedicated.  Building setbecks ore as shown on plat. In ony event, building setbacks shol! conform to the current Zoning Ordinance of the City of Leander, Texas.  The following variances were granted per a Development Agreement with the City of Leonder and epproval of the Crystol Fails If Concept Plan on May 1, 2003.  Private Streets with roadside drainage (Austin Transportation Criteria Waived). No sidewalks, due to private streets and terrain.  No street fights, light pollution free deed restrictions.  No tree survey, due to private streets.  pope  No development shall begin on Lots 7-8, 11-15, 15~21, Bleck “C” and Lots 71-80, 82-84, 87-88, 154~169, Block "E”, prior to issuance of a Flood Plain Development Permit by the Williamson County Flood Plain Administrator far each lot specified.  The developer, builder, seller, or agent shall inform, in writing, each buyer of subdivision fots or property located within flood hazard recs thet such property is in an identified flaad hogard area ond thot o Flood Ptoin Development Permit will be required before a structure can he ploced on the property. The written notice shall be filed for record in the Deed Records of Williomson County. A copy of this written notice shail be provided when opplications are mode for Flood Ploin Development Permits.  Prior to any channel olterstions, bridge construction, fill, dredging, grading, chonnel improvement, or storoge of materials or ary other change within the 100 year flood plain located within this blue line (survey), on opplication for Flood Plain Development Permit with a description of the project and extent of changes, if any, to the wotercourse or naturol drainage as a result of the propased development must be submitted to and approved by the Williamson Caunty Flood Plain Administrator. All specifications ond details necessory for complete review must be provided.  Prioe to ony channel alteration or bridge construction which will chonge existing flood patterns oc elevations, o letter of map amendment must be submitted to and approved Sy the Federal Emergency Monagement Agency.  No driveway sholl be constructed closer than S0\' or 60% of parcel frontoge. whichever is less, to the ROW of on intersecting focal or collector street.  Front building lines cre measured from the edge of the street easement. Garages facing a side street on a comer lot ore required to be set back 20°. There is no floodway contoined within this subdivision ateording to the Federal Emergency Managment  Agency os shown on the Federal Flood insurance Rate Mop No. 48453C0275 £, Trovie County, Texas dated June 16, 1993.  Na structure or lond on this blue line (survey) sha!l hereafter be located or oltered without first submitting a CERTIFICATE OF COMPLIANCE Application Form to the Williamson County Flodd Plain Administrator.  BENCHMARKS  BM_t: BRASS DISC SET IN CONCRETE AT THE BACK OF CURB OPPOSE FRONT LOT CORNER OF LOT 4 AND $, BLOCK "F” ELEVATION = 876.96  BM 2: BRASS OISC SET IN CONCRETE AT THE BACK OF CURE BOL SOUTHEAST OF THE COMMON FRONT LOT CORNER OF LOT 167 AND. 165, BLOCK “E” ELEVATION = 897.04  SM 3: BRASS DISC SET IN CONCRETE AT THE BACK OF CURA 35° NORTRWEST OF THE COMMON FRONT LOT CORNER OF LOT 161 AND 162, BLOCK *E” ELEVATON = 638,27  8M 4: BRASS DISC SET IN CONCRETE AT THE SACK OF CURB OPPOSITE FRONT LOT CORNER OF LOT 8S AND 86, BLOCK "E™ ELEVATION = 922.23  BM 5: BRASS DISC SET IN| CONCRETE AT THE SACK OF CURB IN LOT 80, BLOCK "E", OPPOSITE THE CENTERLINE OF PUMPKIN RIDGE, ELEVATION = 894.45  BM 8: BRASS DISC SET IN CONCRETE AT THE BACK OF CURE 15" WEST OF THE COMMON FRONT LOT CORNER OF LOT 78 AND 77, BLOCK "E ELEVATION = 852.36  VERTICAL DATUM: NAVD-28, BASED ON CITY OF LEANER GPS CONTROL,  SENDERO. SURVEYING  PLOT OAT  02/05/06 "SCALE: 17=100"  DATE OF SURVEY: Fabrucry, 2005  BEARING BASIS: Ove. We. 200000079  DRAWN BY! PMC APPROVED BY; PUD  CRYSTAL FALLS I1™ Za  914 W. FM 3626, No. 105 TEL. (512) 291-8272 AUSTIN, TEXAS 78743 Fak (512) 291-8279]  FIELONOTE FILE: NA  feeee  PROUEDT WUMBER: OU1-0S-007 114 OF 42  ',
+                        ocr_quality: {
+                            word_confidence: 0.62,
+                            readability_score: 61.16
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        },
+        {
+            '11': {
+                images: [
+                    {
+                        rotation: 0,
+                        rotation_to_zero: 360,
+                        rotation_confidence: 5.58,
+                        script_language: 'Greek',
+                        script_confidence: 0,
+                        format: 'PNG',
+                        mode: 'RGB',
+                        filename: '',
+                        info: {
+                            dpi: [
+                                96.012,
+                                96.012
+                            ]
+                        },
+                        rotated_for_ocr: false,
+                        text: 'ZOO ODO |  GRAND MESA AT CRYSTAL FALLS I, SECTION 5  DEDICATION STATEMENT:  THAT LOOKOUT DEVELOPMENT GROUP, LP. A TEXAS LIMITED PARTNERSHIP, BEING THE OWNERS OF 244.112 ACRES OF LAND SITUATED IN TRAVIS COUNTY, TEXAS OUT OF THE CW. OWENS SURVEY NO. 71, THE C.S. MASON SURVEY NO. 204, THE TOM CATER SURVEY NO. 206, THE C.C. CHAFIN SURVEY NO. 78, THE JH. HARRIS SURVEY NO. 96 AND THE J.M. FRAME SURVEY NO. 656, BEING ALL OF A 240.989 ACRE TRACT OF LAND CONVEYED TO LOOKOUT DEVELOPMENT GROUP, LP. BY DEED OF RECORD IN DOCUMENT NUMBER 2005072609 OF THE OFFICIAL PUBLIC RECORDS OF TRAVIS COUNTY, TEXAS, AND PORTIONS OF THOSE PROPERTIES CONVEYED TO LOOKOUT PARTNERS, L-P. BY DEEDS OF RECORD IN VOLUME 13985, PAGE 1927, VOLUME 13085, PAGE 1974 OF THE REAL PROPERTY RECORDS OF TRAVIS COUNTY, TEXAS AND DOCUMENT NUMBER 2000162836 OF THE OFFICIAL PUBLIC RECORDS OF ‘TRAVIS COUNTY, TEXAS, 00 HEREBY PLAT SAID 244.112 ACRES OF LAND IN ACCORDANCE WITH APPLICABLE ORDINANCES OF THE CiY OF LEANDER, TEXAS AND TRAVIS, COUNTY, TEXAS, THE HEREIN DESCRIBED PLAT TO @E KNOWN AS GRAND MESA AT CRYSTAL FALLS fl, SECTION 5 AND DO HEREBY DEDICATE TO THE PUBLIC THE USE OF OF ALL EASEMENTS AND PARKLAND AS SHOWN HEREON, SUBJECT TO ANY EASEMENTS AND/OR RESTRICTIONS HERETOFORE GRANTED AND NOT RELEASED.  we L.  WILLIAM. HINCKEEY BY LOOKOUT GROUP, INC., GENERAL PARTNER: 2370 RICE BOULEVARD, SUITE 200  HOUSTON, TEXAS 77005  Ot 68-98% BATE  STATE_OF TEXAS COUNTY OF TRAVIS  BEFORE ME, THE UNDERSIGNED AUTHORITY, ON THIS DAY PERSONALLY APPEARED WILLIAM R. HINCKLEY, KNOWN TO ME TO BE THE PERSON WHOSE NAME 1S SUBSCRIBED TO THE FOREGOING INSTRUMENT AND ACKNOWLEDGED TO ME THAT HE EXECUTED SAME FOR THE PURPOSE AND CONSIDERATION THEREIN EXPRESSED, IN THE CAPACITY THEREIN STATED.  os GIVEN UNDER MY HAND AND SEAL OF OFFICE, THIS THE B~ Day oF february 20.0l AD.  ARBARA A. SHIT i otry Publ, Spe at Tos  inf commission Pee December D7, 2008  NOTARY PUBLIC IN AND FOR THE COUNTY of TRAVIS, Texas My COMMISSION EXPIRES IZ-7-O®%  STATE_OF TEXAS COUNTY OF TRAVIS  aeeroveo Tus tHe 4 pay or February, 20 Mle ao. at a puauc  MEETING OF THE PLANNING AND ZONING COMMISSION OF THE CITY OF LEANDER, TEXAS AND AUTHORIZED TO BE FILED FOR RECORD BY THE COUNTY CLERK OF TRAVIS COUNTY, TEXAS  HCY OF LEANDER, TEXAS  ATFEST:  City SECRETARY CITY OF LEANDER. TEXAS  BASED UPON THE ABOVE REPRESENTATIONS OF THE ENGINEER OR SURVEYOR WHOSE SEAL IS AFFIXED HERETO, AND AFTER A REVIEW OF THE BLUELINE AS REPRESENTED BY THE SAID ENGINEER OR SURVEYOR, | FIND THAT THIS ALUELINE (SURVEY) COMPLIES WITH THE, REQUIREMENTS OF EDWARDS AQUIFER REGULATIONS FOR WILLIAMSON COUNTY, WILLIAMSON COUNTY FLOOD PLAIN REGULATIONS AND WILLIAMSON COUNTY ON-SITE SEWAGE FACILITY REGULATIONS. THIS CERTIFICATION IS MADE SOLELY LPON SUCH REPRESENTATIONS AND SHOULD NOT BE RELIED UPON FOR VERIFICATIONS OF THE FACTS ALLEGED. THE WILLIAMSON COUNTY & CITIES HEALTH DISTRICT AND WILLIAMSON COUNTY DISCLAIMS ANY. RESPONSIBILITY TO ANY MEMBER OF THE PUBLIC FOR INDEPENDENT VERIFICATION OF THE REPRESENTATIONS, FACTUAL CR CTHERWISE CONTAINED IN THIS BLUELINE (SURVEY) AND THE DOCUMENTS ASSOCIATED ‘WITH IT.  \\SBBbs. 2/8leg  PAULO PINTO DATE DIRECTOR OF ENVIRONMENTAL SERVICES:  Leander, Texas 78648-1220 el (612) 269-3882 Far. (812) 250.8016  A Jay Engineering Company, Ine. PMB. 503 vi, P.O, Box 1220  CRYSTAL FALLS T™  The Natural Alternative To Subdivisions  STATE,_OF TEXAS COUNTY OF TRAVIS  1, DANA DEBEAUVOIR, CLERK OF TRAVIS, TEXAS, DO HEREBY CERTIFY THAT THE FOREGOING INSTRUMENT OF WRITING, WHTH I \\FICATE’ OFF At TION WAS AILED FOR Jn. RECORO Nf OFFICE. ON THe. LEE hay OF prea Wbtho. a1 LO-SI 7c10cK iM, AND hist jaca Ole ide TUEAGIN oF eae Utes 200, AD. aT geo) o\'clock, 5. Ba RECORDS OF SAID COUNTY AND STATE, OnbeR obguuENT wuNseR 2 COUPOGO4)  . elutn OE otha. OFFICE OF THE COUNTY CLERK THE ve, DAY OF  steal te,  DANA, OF TF  STATE OF TEXAS COUNTY OF TRAVIS  |, PHILLIP £, MCLAUGHLIN AM AUTHORIZED UNDER THE LAWS OF THE STATE OF TEXAS TO PRACTICE THE PROFESSION OF LAND SURVEYING, AND HEREBY STATE THAT THIS PLAT CONFORMS WITH APPLICABLE ORDINANCES OF THE CITY OF LEANDER, TEXAS AND TRAVIS COUNTY, TEXAS, AND THAT ALL EXISTING EASEMENTS OF RECORD OF WHICH | AM  AWARE HAVE BEEN SHOWN OR NOTED HEREON,  4 c ih fide —  REGISTERED PROFESSIONAL LAND SURVEYOR, STATE OF TEXAS NO. 5300  SENDERO SURVEYING  917 W. EM 1626, NO, 105  AUSTIN, TEXAS 78748  512-281-8272  STATE OF TEXAS COUNTY OF TRAVIS  | HEREBY CERTIFY THAT THE PROPERTY HEREIN IS PARTIALLY WITHIN A SPECIAL FLCOD HAZARD AREA AS IDENTIFIED BY THE FEDERAL EMERGENCY MANAGEMENT AGENCY AS SHOWN ON THE FEDERAL FLOOD INSURANCE RATE MAP NO, 48453CO275 E, TRAVIS COUNTY, TEXAS, DATED JUNE 76, 1993.  |, THE UNDERSIGNED PROFESSIONAL ENGINEER IN THE STATE OF TEXAS, DO CERTIFY THAT THE PROVISHPNS CONTAINED ON THIS PLAT COMPLY WITH THE SUBDIVISION ORDINANCES: AND DRAINGE, POLICIES ADOPTED BY THE CITY OF LEANDER, TEXAS.  SAMUEL D_KIGER, STATE OF TEXAS NO. 89353 JAY ENGINEERING COMPANY, INC, P.O. BOX 7220  LEANDER, TEXAS 78646-1220 512-259-J38B2  ALL PROPERTY OF THE HEREIN-DESCRIBED SUBDIVISION JS SUBJECT TO THE LOWER COLORADO RIVER AUTHORITY\'S NONPOINT~SOURCE (NPS) POLLUTION CONTROL ORDINANCE. ANY DEVELOPMENT OTHER THAN CONSTRUCTION ON A SINGLE-FAMILY RESIDENTIAL LOT MAY REQUIRE AN NPS DEVELOPMENT PERMIT FROM THE LOWER COLORADO RIVER AUTHORITY.  THE WATER QUALITY PROTECTION AREA IN THE FORM OF QUILDING SETBACKS IS USED TO IMPROVE THE QUALITY OF STORM WATER RUNOFF FROM DEVELOPED LANDS. NO STRUCTURES OR OTHER IMPROVEMENTS MAY BE CONSTRUCTED WITHIN THE BUILDING SETBACKS OTHER THAN THOSE ALLOWED BY THE CITY OF LEANDER. THE WATER QUALITY PROTECTION AREA MAY BE ENFORCED BY THE LOWER COLORADO RIVER AUTHORITY OR ANY OTHER GOVERNMENTAL ENTITY,  Va one C 7 | ATE OF SURVEY: briny, 2008  BEARING GASIS: Doe, No, 200000018 SENDERO. SURVEYING  DRAWN BY: EMG APPROVED BY: CMC  FIELONOTE FILE: NA  Geawne Fue: cor-os-0o7@._| SHEET 007 {42 OF 12  12 W, FM 1628, No. 105 TEL. (5:2) 291-8272  AUSTIN, TEXAS 78748 Fay (512) 281—2279| PROJECT NUMBE!  ',
+                        ocr_quality: {
+                            word_confidence: 0.76,
+                            readability_score: 60.85
+                        },
+                        file_path: 'data\\plats\\GRAND MESA\\Grand Mesa 5 Recorded Plat.pdf_image_0'
+                    }
+                ],
+                text: ''
+            }
+        }
+    ]
+}
