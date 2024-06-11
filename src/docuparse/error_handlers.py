@@ -6,7 +6,9 @@ from typing import NoReturn
 
 import pymupdf
 
-from docuparse import logger
+from docuparse import get_logger
+
+logger = get_logger()
 
 
 def handle_file_exceptions(e: Exception, path: str = "") -> NoReturn:

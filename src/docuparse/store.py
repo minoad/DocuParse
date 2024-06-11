@@ -8,7 +8,9 @@ from typing import Any, Protocol
 
 from pymongo import MongoClient
 
-from docuparse import config, logger
+from docuparse import config, get_logger
+
+logger = get_logger()
 
 
 class DataWriter(Protocol):
@@ -157,7 +159,7 @@ class MongoDBDataWriter:
         Returns:
             bool: True if a document with the given URI exists, False otherwise.
         """
-        return bool(self.collection.find_one(uri))
+        return bool(self.collection.find_one(str(uri)))
 
     def close(self) -> None:
         """

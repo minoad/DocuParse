@@ -9,10 +9,18 @@ from typing import Optional
 
 from dotenv import load_dotenv
 
-logging.basicConfig(format="%(asctime)s %(levelname)-8s %(message)s", level=logging.INFO, datefmt="%Y-%m-%d %H:%M:%S")
 
-# Create a logger object
-logger = logging.getLogger(__name__)
+def get_logger(verbose: bool = False) -> logging.Logger:
+    if verbose:
+        logging.basicConfig(
+            format="%(asctime)s %(levelname)-8s %(message)s", level=logging.DEBUG, datefmt="%Y-%m-%d %H:%M:%S"
+        )
+    else:
+        logging.basicConfig(
+            format="%(asctime)s %(levelname)-8s %(message)s", level=logging.INFO, datefmt="%Y-%m-%d %H:%M:%S"
+        )
+    # Create a logger object
+    return logging.getLogger(__name__)
 
 
 # Load environment variables from .env file

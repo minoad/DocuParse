@@ -11,7 +11,9 @@ from nltk.corpus import words
 from PIL import Image, ImageOps
 from textstat import flesch_reading_ease  # pylint: disable=no-name-in-module
 
-from docuparse import config, logger
+from docuparse import config, get_logger
+
+logger = get_logger()
 
 nltk.download("words")
 

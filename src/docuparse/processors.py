@@ -24,11 +24,11 @@ import pytesseract
 from PIL import Image
 from pymupdf.mupdf import FzErrorArgument
 
-from docuparse import logger
+from docuparse import get_logger
 from docuparse.error_handlers import handle_file_exceptions
 from docuparse.ocr import OCREngine
 
-# TODO: Move this to its own file.
+logger = get_logger()
 
 
 class FileProcessor(Protocol):  # pylint: disable=too-few-public-methods

@@ -6,10 +6,10 @@ from typing import Any
 
 import pytest
 
-from docuparse import config, logger
+from docuparse import config, get_logger
 from docuparse.processors import OCREngine
 
-# , PDFProcessor
+logger = get_logger()
 
 ocr = OCREngine()
 test_cases: dict[str, dict[str, Any]] = {

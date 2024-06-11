@@ -21,7 +21,8 @@ dependencies = [
   'textstat',
   'spacy',
   'sense2vec',
-  'pymongo'
+  'pymongo',
+  'click'
 ]
 
 [project.optional-dependencies]

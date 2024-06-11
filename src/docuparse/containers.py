@@ -5,12 +5,13 @@ Container objects.  Right now this is only a directory.
 import pathlib
 from dataclasses import dataclass, field
 
-from docuparse import logger
-
-# from docuparse.error_handlers import handle_file_exceptions
+from docuparse import get_logger
 from docuparse.ocr import OCREngine
 from docuparse.processors import FileProcessor, ImageProcessor, PDFProcessor
 from docuparse.store import DataWriter, MongoDBDataWriter
+
+logger = get_logger()
+# from docuparse.error_handlers import handle_file_exceptions
 
 ocr = OCREngine()
 DEFAULT_PROCESSORS: dict[str, FileProcessor | ImageProcessor] = {
@@ -72,7 +73,32 @@ class FileDataDirectory:  # pylint: disable=too-few-public-methods
         """
         self.writers.append(writer)
 
-    def process_files(self, force: bool = False):
+    def files(self, force: bool) -> list[tuple[pathlib.Path, FileProcessor, DataWriter]]:
+        """
+        returns a list of strings of files to operate on.
+        """
+
+        files_with_processor_and_writer = []
+
+        if not self.directory.is_dir():  # type: ignore
+            raise ValueError(f"The path {self.directory} is not a valid directory.")
+
+        for writer in self.writers:
+            for file_path in self.directory.iterdir():  # type: ignore
+                files_with_processor_and_writer.append(
+                    (
+                        file_path,
+                        self.processors.get(file_path.suffix.lower(), False),
+                        writer,
+                        writer.exists(str(file_path)),
+                    )
+                )
+
+        if force:  # return all that have a processor.
+            return [i for i in files_with_processor_and_writer if i[1]]  # type: ignore
+        return [i for i in files_with_processor_and_writer if i[1] and not i[2]]  # type: ignore
+
+    def process_files(self, force: bool = False, dry_run: bool = False) -> None:
         """
         Process all files in the specified directory using the registered processors.
 
@@ -82,29 +108,20 @@ class FileDataDirectory:  # pylint: disable=too-few-public-methods
         TODO: Check if file needs to be processes.
             for each writer, if not force and not exists, write.
         """
+        files = self.files(force)
+
+        if dry_run:
+            for i in files:
+                logger.info(f"would execute for {str(i[0])}")
+            return None
+
         if not self.directory.is_dir():  # type: ignore
             raise ValueError(f"The path {self.directory} is not a valid directory.")
 
-        processed_files = {}
-        for file_path in self.directory.iterdir():  # type: ignore
-            if file_path.suffix.lower() in self.processors:
-                # what writers need to write.
-                w: list[DataWriter] = []
-                for writer in self.writers:
-                    if not writer.exists(str(file_path)) or force:
-                        logger.info(f"we are going to write {str(file_path)} for {writer}")
-                        w.append(writer)
-                    else:
-                        logger.info(f"{str(file_path)} exists for {writer}.  Use force=True to force write.")
+        for f in files:
+            writer: DataWriter = f[2]
+            file: pathlib.Path = f[0]
+            processor: FileProcessor = f[1]
+            writer.write_data({str(file): processor.process_file(file_path=file)}, force=force)
 
-                logger.info(f"begin processing {file_path}")
-                processor = self.processors[file_path.suffix.lower()]
-                # try:
-                if len(w) > 0:  # only process if we have somewhere to write
-                    processed_files[str(file_path)] = processor.process_file(file_path=file_path)
-                    for writer in w:
-                        writer.write_data(data={str(file_path): processed_files[str(file_path)]}, force=True)
-                # except (OSError, RuntimeError, ValueError) as e:
-                #    handle_file_exceptions(e, str(file_path.resolve()))
-                # self.data.extend(data)
-            logger.info(f"completed file {str(file_path)}")
+        return None
