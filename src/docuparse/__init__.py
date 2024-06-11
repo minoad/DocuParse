@@ -4,7 +4,8 @@ Contains default stuff
 
 import logging
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from typing import Optional
 
 from dotenv import load_dotenv
 
@@ -18,16 +19,35 @@ logger = logging.getLogger(__name__)
 load_dotenv(dotenv_path="./conf/dev.env")
 
 
-@dataclass()
-class Config:
+@dataclass
+class Config:  # pylint: disable=too-many-instance-attributes
     """
     Config management for project
+    Ignoring too-many-instance-attributes as this is a config object.
     """
 
-    project_name: str | None = os.getenv("PROJECT_NAME")
-    environment: str | None = os.getenv("ENVIRONMENT")
-    pytesseract_executable: str | None = os.getenv("pytesseract_exe", r"C:\Program Files\Tesseract-OCR\tesseract.exe")
-    mongo_db_config: str | None = os.getenv("mongo_db_config", '{"server": "server_name.db"}')
+    project_name: str = field(default_factory=lambda: os.getenv("PROJECT_NAME", ""))
+    environment: str = field(default_factory=lambda: os.getenv("ENVIRONMENT", ""))
+    pytesseract_executable: str = field(
+        default_factory=lambda: os.getenv("PYTESSERACT_EXE", r"C:\Program Files\Tesseract-OCR\tesseract.exe")
+    )
+
+    mongo_server: str = field(default_factory=lambda: os.getenv("MONGO_SERVER", ""))
+    mongo_database: str = field(default_factory=lambda: os.getenv("MONGO_DATABASE", ""))
+    mongo_port: str = field(default_factory=lambda: os.getenv("MONGO_PORT", ""))
+    mongo_user: str = field(default_factory=lambda: os.getenv("MONGO_USER", ""))
+    mongo_password: str = field(default_factory=lambda: os.getenv("MONGO_PASSWORD", ""))
+    mongo_collection: str = field(default_factory=lambda: os.getenv("MONGO_COLLECTION", ""))
+
+    mongo_connection_string: str = field(init=False)
+
+    def __post_init__(self):
+        if self.mongo_user and self.mongo_password and self.mongo_server and self.mongo_port:
+            self.mongo_connection_string = (
+                f"mongodb://{self.mongo_user}:{self.mongo_password}@{self.mongo_server}:{self.mongo_port}/"
+            )
+        else:
+            self.mongo_uri = None
 
 
 # Create an instance of the Config class
