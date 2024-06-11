@@ -7,9 +7,9 @@ from typing import Any
 
 import nltk
 import pytesseract
-import textstat
 from nltk.corpus import words
 from PIL import Image, ImageOps
+from textstat import flesch_reading_ease  # pylint: disable=no-name-in-module
 
 from docuparse import config, logger
 
@@ -52,6 +52,9 @@ class OCREngine:
             self.image = file_ref
 
     def get_image_filename(self):
+        """
+        Collect the image filename.
+        """
         return getattr(self.image, "filename", "")
 
     def is_english_word(self, word):
@@ -76,7 +79,8 @@ class OCREngine:
 
     def readability_score(self, text):
         """Calculate the readability score of the text using Flesch reading ease."""
-        return textstat.flesch_reading_ease(text)
+        reading_score = flesch_reading_ease(text)
+        return reading_score
 
     def ocr_quality(self, text, max_count: int = 0):
         """
@@ -120,7 +124,7 @@ class OCREngine:
             i.split(": ")[0]: i.split(": ")[1] for i in osd.split("\n") if len(i.split(": ")) > 1
         }  # pylint: disable=C0301
         data = {
-            "page_num": osd_dict.get("Page number"),
+            # "page_num": osd_dict.get("Page number"),
             "rotation": int(osd_dict.get("Rotate", "0")),
             "rotation_to_zero": 360 - int(osd_dict.get("Rotate", "0")),
             "rotation_confidence": float(osd_dict.get("Orientation confidence", "0.0")),
@@ -157,6 +161,9 @@ class OCREngine:
             self.image_data["rotated_for_ocr"] = True
 
     def get_ocr_text(self):
+        """
+        Collect the ocr'ed check.
+        """
         self.image_data["text"] = pytesseract.image_to_string(self.image).replace("\n", " ")
 
     def transform_image(self):
@@ -196,9 +203,9 @@ class OCREngine:
             self.rotate_image()
 
         self.transform_image()
-        self.image_data["image"] = self.image
+        # self.image_data["image"] = self.image
 
-    def perform_ocr(self, image: str | pathlib.Path | Image.Image | None = None, file_name: str = ""):
+    def perform_ocr(self, image: str | pathlib.Path | Image.Image | None = None, file_name: str = "") -> dict[str, Any]:
         """
         Performs OCR on the given PIL Image object and returns the extracted text.
         If an image is provided, attempt to load it.
@@ -214,5 +221,5 @@ class OCREngine:
         self.ocr_quality(self.image_data["text"], 50)
         self.image_data["file_path"] = f"{file_name}_image_{self.image_data.get("page_num", 0)}"
 
-        logger.warning(f"{self.image_data}")
-        return self.image_data["text"]
+        # logger.warning(f"{self.image_data}")
+        return self.image_data  # ["text"]
