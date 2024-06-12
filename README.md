@@ -16,6 +16,9 @@ DocuParse is a powerful document parsing and analysis tool built with Python. It
 1. Add image file processor.
 1. Add searching to the cli.  Likely will need to separate the click groups out into their own files.
 1. NLTK to the cli.
+1. Detect watermarks.
+1. Remove watermark prior to ocr.
+1. Test accuracy of ocr osd orientation detection.
 
 ## Resources
 

@@ -22,7 +22,8 @@ dependencies = [
   'spacy',
   'sense2vec',
   'pymongo',
-  'click'
+  'click',
+  'mongomock'
 ]
 
 [project.optional-dependencies]

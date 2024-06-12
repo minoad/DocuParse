@@ -17,21 +17,9 @@ def _execute(directory: str, force: bool):
 
 @click.group()
 def docuparse():
-    """A simple command-line interface using click."""
-
-
-@click.command()
-@click.option("--force", is_flag=True, help="Force data overwrite.")
-@click.option("--verbose", is_flag=True, help="Enable verbose mode.")
-@click.argument("directory", default="data/test/pdf/")
-def test(directory: str, force: bool, verbose: bool):
     """
-    Runs collection against a small test dataset.
+    Docuparse group
     """
-    logger = get_logger(verbose)
-    logger.info("beginning test run.")
-    click.echo("begging collection of test")
-    _execute(directory=directory, force=force)
 
 
 @click.command()
@@ -44,12 +32,11 @@ def run(directory: str, force: bool, verbose: bool, dry_run):
     Runs collection against a small test dataset.
     """
     logger = get_logger(verbose)
-    click.echo("begging collection of test")
+    click.echo("beginning collection of test")
     logger.info("beginning run.")
     FileDataDirectory(directory).process_files(force=bool(force), dry_run=dry_run)
 
 
-docuparse.add_command(test)
 docuparse.add_command(run)
 
 
