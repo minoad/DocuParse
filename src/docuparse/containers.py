@@ -73,7 +73,7 @@ class FileDataDirectory:  # pylint: disable=too-few-public-methods
         """
         self.writers.append(writer)
 
-    def files(self, force: bool) -> list[tuple[pathlib.Path, FileProcessor, DataWriter]]:
+    def _files(self, force: bool) -> list[tuple[pathlib.Path, FileProcessor, DataWriter]]:
         """
         returns a list of strings of files to operate on.
         """
@@ -104,12 +104,9 @@ class FileDataDirectory:  # pylint: disable=too-few-public-methods
 
         Raises:
             ValueError: If the specified directory is not a valid directory.
-
-        TODO: Check if file needs to be processes.
-            for each writer, if not force and not exists, write.
         """
-        files = self.files(force)
-
+        files = self._files(force)
+        logger.info(f"Beginning docuparse run for {self.directory}.")
         if dry_run:
             for i in files:
                 logger.info(f"would execute for {str(i[0])}")

@@ -7,6 +7,15 @@ from pathlib import Path
 from typing import Any, Protocol
 
 from pymongo import MongoClient
+from pymongo.collection import Collection
+from pymongo.database import Database as mongoDB
+from pymongo.errors import (
+    ConfigurationError,
+    ConnectionFailure,
+    InvalidURI,
+    OperationFailure,
+    ServerSelectionTimeoutError,
+)
 
 from docuparse import config, get_logger
 
@@ -91,14 +100,46 @@ class FileDataWriter:
 #         print("Closing database connection")
 
 
-class MongoDBDataWriter:
+class DataConnector(Protocol):
     """
-    A class for writing data to a MongoDB collection.
+    Connection interface for readers and writers that require connection first.
+    """
 
-    Args:
-        connection_string (str): MongoDB connection string.
-        database_name (str): The name of the database.
-        collection_name (str): The name of the collection.
+    def connect(self) -> None:
+        """
+        Establish the connection
+        """
+
+    def close(self) -> None:
+        """
+        Close the connection
+        """
+
+
+class DataReader(Protocol):
+    """
+    Data reader
+    """
+
+    def __init__(self, connection: DataConnector):
+        """Data reader protocol"""
+
+    def read_data(self, query: dict[str, Any] | None = None) -> list[dict[str, Any]] | None:
+        """Read data from the data source."""
+
+    def length(self) -> int:
+        """Returns the length of the read data"""
+
+
+# Concretes
+
+
+class MongoDBConnection:
+    """
+    Creates the mongo connection.
+    connect to the db and collection.
+        operate on db:                      self.connection.db
+        operate on collection in the db:    self.connection.collection
     """
 
     def __init__(
@@ -107,26 +148,91 @@ class MongoDBDataWriter:
         database_name: str = config.mongo_database,
         collection_name: str = config.mongo_collection,
     ):
+        self.connection_string: str = connection_string
+        self.collection_name: str = collection_name
+        self.database_name: str = database_name
+        self.client: MongoClient
+        self.db: mongoDB[Any]
+        self.connect()
+
+    def connect(self) -> None:
+        """Connect to the MongoDB server."""
+        try:
+            self.client = MongoClient(self.connection_string)
+            self.db = self.client[self.database_name]
+            self.collection: Collection[Any] = self.db[self.collection_name]
+        except (ConfigurationError, ConnectionFailure, InvalidURI, ServerSelectionTimeoutError) as e:
+            logger.error(f"failed to connect to {self.connection_string}")
+            raise e
+
+    def close(self) -> None:
+        """Close the connection to the MongoDB server."""
+        if self.client:
+            self.client.close()
+            self.client = None
+            self.db = None
+
+
+class MongoDBDataReader:
+    """
+    A class for reading data from MongoDB collections.
+    """
+
+    def __init__(self, connection: MongoDBConnection = MongoDBConnection()):
+        self.connection: MongoDBConnection = connection
+        self.count: int
+
+    def read_data(self, query: dict[str, Any] | None = None) -> list[dict[str, Any]]:
         """
-        Initialize the MongoDBDataWriter.
+        Read data from a specific collection.
 
-        :param connection_string: MongoDB connection string.
-        :param database_name: The name of the database.
-        :param collection_name: The name of the collection.
+        Args:
+            query (dict[str, Any] | None): The query to filter the data. Defaults to None.
 
-        TODO:
-            - Add a context manager.
+        Returns:
+            list[dict[str, Any]]: The list of documents matching the query.
         """
-        self.connection_string = connection_string
-        self.client: MongoClient = MongoClient(connection_string)
-        self.database = self.client[database_name]
-        self.collection = self.database[collection_name]
+        if not query:
+            query = {}
+        if self.connection.db is None:
+            raise ConnectionFailure("Not connected to any database. Call connect() first.")
 
-    def write_data(self, data: dict[str, Any], force: bool = False) -> bool:
+        try:
+            results = list(self.connection.collection.find(query))
+            self.count = len(results)
+            return results
+        except OperationFailure as e:
+            logger.error(f"failed read operation on mongo {self.connection} with {e}")
+            raise e
+
+    def length(self) -> int:
+        """
+        Returns the length of the latest read operation.
+        """
+        return self.count if self.count else 0
+
+    def close(self) -> None:
+        """
+        Close the connection to the MongoDB server.
+        """
+        if self.connection:
+            self.connection.close()
+
+
+class MongoDBDataWriter:
+    """
+    A class for writing data to a MongoDB collection.
+    """
+
+    def __init__(self, connection: MongoDBConnection = MongoDBConnection()):
+        self.connection = connection
+
+    def write_data(self, data: dict[str, dict[str, Any]], force: bool = False) -> bool:
         """
         Write data to the MongoDB collection.
-
-        :param data: The data to write. Must be a dictionary where keys are IDs.
+            data: value must be a dict of dict[str, dict[str, Any]]
+            ex: {"test": {"v": "true"}}
+                "test" is the index, test.value is what is getting written to the db.
         """
         # im expecting a dict with a single key
         if len(list(data.keys())) != 1:
@@ -134,20 +240,24 @@ class MongoDBDataWriter:
             raise ValueError
 
         key = list(data.keys())[0]
-        value = data[key]
+        value: dict = data[key]
         value["_id"] = key
 
-        if self.exists(key):  # if it exists
-            if force:  # and we are forcing, replace
-                logger.info(f"replacing {key} with force.")
-                return self.collection.replace_one({"_id": key}, value).acknowledged
-
-            logger.info(f"not writing {key}. Index exists.  Use force=True to replace.")
-            return False
-
-        # Base case, not forcing and index does not exist
-        logger.info(f"writing {key} to mongo while not forcing.")
-        return self.collection.insert_one(value).acknowledged
+        try:
+            # collection = self.connection.collection
+            if self.exists(key):
+                if force:
+                    logger.info(f"Replacing {key} with force.")
+                    result = self.connection.collection.replace_one({"_id": key}, value)
+                    return result.acknowledged
+                logger.info(f"Not writing {key}. Index exists. Use force=True to replace.")
+                return False
+            logger.info(f"Writing {key} to MongoDB while not forcing.")
+            result = self.connection.collection.insert_one(value)
+            return result.acknowledged
+        except OperationFailure as e:
+            logger.error(f"Failed write operation on MongoDB: {e}")
+            raise e
 
     def exists(self, uri: str) -> bool:
         """
@@ -159,10 +269,10 @@ class MongoDBDataWriter:
         Returns:
             bool: True if a document with the given URI exists, False otherwise.
         """
-        return bool(self.collection.find_one(str(uri)))
+        return bool(self.connection.collection.find_one(str(uri)))
 
     def close(self) -> None:
         """
         Close the connection to MongoDB.
         """
-        self.client.close()
+        self.connection.close()
