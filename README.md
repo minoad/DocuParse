@@ -1,6 +1,6 @@
 # DocuParse
 
-DocuParse is a powerful document parsing and analysis tool built with Python. It leverages several complex Python subjects and libraries to provide robust document processing capabilities. This project is designed to be flexible, efficient, and easy to use.
+DocuParse is a powerful document parsing and analysis tool built with Python. It provides robust document processing capabilities. This project is designed to be flexible, efficient, and easy to use.
 
 ## Features
 
@@ -14,8 +14,15 @@ DocuParse is a powerful document parsing and analysis tool built with Python. It
 1. Unit tests
 1. Add coverage requirements to pre-commit.
 1. Add image file processor.
-1. Add searching to the cli.  Likely will need to seperate the click groups out into their own files.
+1. Add searching to the cli.  Likely will need to separate the click groups out into their own files.
 1. NLTK to the cli.
+
+## Resources
+
+1. [Topic Classification Paper](https://ojs.aaai.org/index.php/ICWSM/article/view/14434/14283)
+1. [pymupdf](https://pymupdf.readthedocs.io/en/latest/the-basics.html)
+1. [pytesseract and opencv](https://nanonets.com/blog/ocr-with-tesseract/)
+1. [Spacey](https://spacy.io/usage/rule-based-matching)
 
 ## Installation
 
