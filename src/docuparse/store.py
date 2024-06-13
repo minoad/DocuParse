@@ -50,54 +50,32 @@ class FileDataWriter:
     Write out a file.
     """
 
-    def __init__(self, file_path):
-        path = file_path
-        if isinstance(path, str):
-            path: Path = Path(file_path)
+    def __init__(self, file_path: str | Path):
+        self.file_path: Path = Path(file_path) if isinstance(file_path, str) else file_path
 
-        self.file_path: Path = path
-        self.file = path
-
-    def write_data(self, data: dict[str, Any] | list[Any]) -> None:
+    def write_data(self, data: dict[str, Any] | list[Any]) -> bool:
         """
         Write file data
         """
-        with open(self.file_path, "w", encoding="utf8") as f:
-            f.write(str(data) + "\n")
+        try:
+            with open(self.file_path, "w", encoding="utf8") as f:
+                f.write(str(data) + "\n")
+        except FileNotFoundError as e:
+            logger.error(f"unable to write to {str(self.file_path)} with error {e}")
+            raise e
+        return True
 
     def close(self):
         """
         File closer
         """
-        raise NotImplementedError
 
-    def exists(self, uri: str) -> bool:
+    def exists(self, uri: str | None | Path = "") -> bool:
         """
-        Check if a file exists
+        Check if a file exists.
         """
-        raise NotImplementedError
-
-    # def close(self) -> None:
-    #     self.file.close()
-
-
-# class DatabaseDataWriter:
-#     def __init__(self, connection_string: str):
-#         self.connection_string = connection_string
-#         self.connection = self._connect_to_database(connection_string)
-
-#     def _connect_to_database(self, connection_string: str):
-#         # Mock database connection
-#         print(f"Connecting to database with {connection_string}")
-#         return None
-
-#     def write_data(self, data: Any) -> None:
-#         # Mock writing data to the database
-#         print(f"Writing data to database: {data}")
-
-#     def close(self) -> None:
-#         # Mock closing the database connection
-#         print("Closing database connection")
+        p: Path = self.file_path if not uri else Path(uri)
+        return p.exists()
 
 
 class DataConnector(Protocol):
@@ -234,7 +212,7 @@ class MongoDBDataWriter:
             ex: {"test": {"v": "true"}}
                 "test" is the index, test.value is what is getting written to the db.
         """
-        # im expecting a dict with a single key
+        # TODO: If we get more than 1 key, do the write multiple.
         if len(list(data.keys())) != 1:
             logger.error(f"detected multiple keys in dict expecting one at {data.keys()}")
             raise ValueError

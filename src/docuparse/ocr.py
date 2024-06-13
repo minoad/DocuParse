@@ -105,8 +105,8 @@ class OCREngine:
 
     def set_image_data(self) -> dict[str, Any]:
         """
-        Get data about the image
-        TODO: Can i get name?
+        Collects various metadata about the image and the ocr
+        results and returns it as a dict.
         """
         data = {}
         try:
@@ -186,9 +186,14 @@ class OCREngine:
         # inverted_image.show(title="Inverted Image")
         # posterized_image.show(title="Posterized Image")
         """
-        self.image = ImageOps.autocontrast(self.image)
-        self.image = ImageOps.posterize(self.image, bits=3)
-        self.image = ImageOps.grayscale(self.image)
+        try:
+            if self.image.mode == "RGBA":
+                self.image.convert("RGB")
+            self.image = ImageOps.autocontrast(self.image)
+            self.image = ImageOps.posterize(self.image, bits=3)
+            self.image = ImageOps.grayscale(self.image)
+        except OSError as e:
+            logger.error(f"could not transform {self.image} due to {e}")
 
     def load_and_preprocess_image(self, correct_rotation=True):
         """
