@@ -12,6 +12,8 @@ DocuParse is a powerful document parsing and analysis tool built with Python. It
 ## TODO
 
 1. Unit tests
+    1. Add delete to mongodbdatawriter.
+    1. Add test to write to mongodb where not exists.
 1. Add coverage requirements to pre-commit.
 1. Add image file processor.
 1. Add searching to the cli.  Likely will need to separate the click groups out into their own files.

@@ -27,6 +27,7 @@ coverage:  ## Run tests with coverage
 	coverage erase
 	coverage run -m pytest
 	coverage report -m
+	python -m pytest --cov=docuparse --cov-report=html tests/
 
 .PHONY: lint
 lint: pylint flake8 black mypy
